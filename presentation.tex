@@ -5,6 +5,9 @@
 \usepackage{multirow}
 %\usepackage{enumitem}
 \usepackage{array}
+%\usepackage{multimedia}
+%\usepackage{media9}
+\usepackage{pdfpc-movie}
 %\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -24,6 +27,7 @@
 \ulistelement    	{Template/sunflower}
 
 \graphicspath{{Figures/}}
+%\addmediapath{{../Movies/}}
 
 \totalNoSlidesDisabled % To turn off the total number of slides in the footer. Comment this if you want the total number of slides in the footer
 
@@ -172,6 +176,27 @@
         \item Os videos dos desafios deverão estar contidos na apresentação final.
         \item Os videos deverão ser completos, tendo começo, meio e fim da missão realizada.
     \end{itemize}
+
+\end{frame}
+%-
+\note{Notes can help you to remember important information. Turn on the notes option.}
+%*----------- SLIDE ------------------------------------------------------------
+\begin{frame}{Movies}
+    %\movie[width=8cm,height=4.5cm]{test}{../Movies/Darwin-OP.mp4}
+
+% \includemedia[
+%     width=0.4\linewidth,
+%     totalheight=0.225\linewidth,
+%     activate=pageopen,
+%     passcontext,  %show VPlayer's right-click menu
+%     addresource=../Movies/Darwin-OP.mp4,
+%     flashvars={
+%       %important: same path as in `addresource'
+%       source=../Movies/Darwin-OP.mp4
+%     }
+%   ]{\fbox{Click!}}{VPlayer.swf}
+
+    \pdfpcmovie{\includegraphics[width=\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
 
 \end{frame}
 %-
