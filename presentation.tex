@@ -5,8 +5,8 @@
 \usepackage{multirow}
 %\usepackage{enumitem}
 \usepackage{array}
-%\usepackage{multimedia}
-%\usepackage{media9}
+\usepackage{multimedia}
+\usepackage{media9}
 \usepackage{pdfpc-movie}
 %\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -28,6 +28,7 @@
 
 \graphicspath{{Figures/}}
 %\addmediapath{{../Movies/}}
+%\multimediapath{{/Movies/}}
 
 \totalNoSlidesDisabled % To turn off the total number of slides in the footer. Comment this if you want the total number of slides in the footer
 
@@ -58,7 +59,7 @@
     \end{frame}
     %-
     \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
+%*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[t]{O sistema robótico}
     \begin{columns}
         \column{.1\textwidth}
@@ -72,6 +73,28 @@
                 \item possui um grande gama de sensores para interação.
             \end{enumerate}
     \end{columns}
+\end{frame}
+%-
+\note{Notes can help you to remember important information. Turn on the notes option.}
+%*----------- SLIDE ------------------------------------------------------------
+\begin{frame}[c]{Darwin-OP - overview}
+    \movie[width=12.8cm,height=7.2cm,showcontrols=true,autostart]
+          {\includegraphics[width=0.3\textwidth]{Darwin-OP}}
+          {Darwin-OP.mp4}
+
+    % \includemedia[
+    %   width=0.4\linewidth,
+    %   totalheight=0.225\linewidth,
+    %   activate=pageopen,
+    %   passcontext,  %show VPlayer's right-click menu
+    %   addresource=../Darwin-OP.mp4,
+    %   flashvars={
+    %   %important: same path as in `addresource'
+    %   source=../Darwin-OP.mp4}
+    %   ]{\fbox{Click!}}{VPlayer.swf}
+
+    %\pdfpcmovie{\includegraphics[width=.3\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
+
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
@@ -180,27 +203,27 @@
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%*----------- SLIDE ------------------------------------------------------------
-\begin{frame}{Movies}
-    %\movie[width=8cm,height=4.5cm]{test}{../Movies/Darwin-OP.mp4}
+% %*----------- SLIDE ------------------------------------------------------------
+% \begin{frame}{Movies}
+%     %\movie[width=8cm,height=4.5cm]{test}{../Movies/Darwin-OP.mp4}
 
-% \includemedia[
-%     width=0.4\linewidth,
-%     totalheight=0.225\linewidth,
-%     activate=pageopen,
-%     passcontext,  %show VPlayer's right-click menu
-%     addresource=../Movies/Darwin-OP.mp4,
-%     flashvars={
-%       %important: same path as in `addresource'
-%       source=../Movies/Darwin-OP.mp4
-%     }
-%   ]{\fbox{Click!}}{VPlayer.swf}
+% % \includemedia[
+% %     width=0.4\linewidth,
+% %     totalheight=0.225\linewidth,
+% %     activate=pageopen,
+% %     passcontext,  %show VPlayer's right-click menu
+% %     addresource=../Movies/Darwin-OP.mp4,
+% %     flashvars={
+% %       %important: same path as in `addresource'
+% %       source=../Movies/Darwin-OP.mp4
+% %     }
+% %   ]{\fbox{Click!}}{VPlayer.swf}
 
-    \pdfpcmovie{\includegraphics[width=\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
+%     \pdfpcmovie{\includegraphics[width=\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
 
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
+% \end{frame}
+% %-
+% \note{Notes can help you to remember important information. Turn on the notes option.}
 % %----------- BACKUP -----------------------------------------------------------
 % \backupbegin
 % %----------- SLIDE ------------------------------------------------------------
