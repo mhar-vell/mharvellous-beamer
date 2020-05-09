@@ -34,15 +34,44 @@
 
 \begin{document}
 %*----------- COVER ------------------------------------------------------------
-\begin{frame}[t,plain]
+ \begin{frame}[t,plain]
+    \includemedia[
+        %width=1ex,
+        %height=1ex,
+        activate=pageopen, 
+        deactivate=onclick,
+        %passcontext,
+        transparent, 
+        addresource=../Figures/hip-hop.mp3,
+        flashvars={
+        source=../Figures/hip-hop.mp3
+        %&autoPlay=true
+        &Play=2s
+        &Loop=true
+        &volume=0.05}
+        ]{}{VPlayer.swf}
     \titlepage
+    %\sound[autostart, inlinesound]{}{../Figures/hip-hop.mp3}
+    %\movie[autostart]{}{hip-hop.mp3}
+    % \includemedia[
+    %     width=1ex,
+    %     height=1ex,
+    %     activate=pageopen, deactivate=onclick,
+    %     %passcontext,
+    %     transparent, 
+    %     addresource=../Figures/hip-hop.mp3,
+    %     flashvars={
+    %     source=../Figures/hip-hop.mp3
+    %     &autoPlay=true
+    %     &Loop=false}
+    %     ]{}{APlayer.swf}
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
 %*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[t]{Introdução} 
     Um dos pontos importantes na área da robótica é a interação entre os sistemas, e em decorrência ao programa de formação em robótica uma das lacunas será preenchida com o desenvolvimento do desafio 2.5.
-    
+  
     O desafio consiste em:
     \newline
         \begin{columns}[c]
@@ -78,9 +107,10 @@
 \note{Notes can help you to remember important information. Turn on the notes option.}
 %*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[c]{Darwin-OP - overview}
-    %  \movie[width=12.8cm,height=7.2cm,showcontrols=true,autostart]
-    %        {\includegraphics[width=0.3\textwidth]{Darwin-OP}}
-    %        {Darwin-OP.mp4}
+    \centering
+    %   \movie[width=12.8cm,height=7.2cm,showcontrols=true,poster,autostart]
+    %         {\includegraphics[width=12.8cm,height=7.2cm]{Darwin-OP}}
+    %         {Darwin-OP.mp4}
 
 
           %Videos and audios don't play on Overleaf! Download the PDF and open in Acrobat Reader to view. :-)
@@ -101,29 +131,34 @@
 
     \includemedia[
       width=0.7\linewidth,
-      totalheight=0.4\linewidth,
+      totalheight=0.39375\linewidth,
       activate=pageopen,
-      passcontext,  %show VPlayer's right-click menu
+      passcontext, 
       addresource=../Figures/Darwin-OP.mp4,
       flashvars={
-      %important: same path as in `addresource'
       source=../Figures/Darwin-OP.mp4
       &autoPlay=true
       &Loop=false}
-      ]{\fbox{Darwin-OP}}{VPlayer.swf}
+      ]{\fbox{\includegraphics{darwin-op}}}{VPlayer.swf}
 
-    %   \includemedia[
-    %     width=0.4\linewidth,
-    %     totalheight=0.225\linewidth,
-    %     activate=pageopen,
-    %     passcontext,  %show VPlayer's right-click menu
-    %     addresource=Figures/Darwin-OP.mp4,
-    %     flashvars={
-    %     %important: same path as in `addresource'
-    %     source=Figures/Darwin-OP.mp4}
-    %     &autoPlay=true
-    %     &Loop=false}
-    %     ]{\fbox{Click!}}{VPlayer.swf}
+    %    \includemedia[
+    %      width=0.4\linewidth,
+    %      totalheight=0.225\linewidth,
+    %      activate=pageopen,
+    % %     passcontext,  %show VPlayer's right-click menu
+    % %     addresource=Figures/Darwin-OP.mp4,
+    %      flashvars={
+    % %     %important: same path as in `addresource'
+    % %     source=Figures/Darwin-OP.mp4}
+    %         modestbranding=1 % no YT logo in control bar
+    %         &autohide=1 % controlbar autohide
+    %         &showinfo=0 % no title and other info before start
+    %         &rel=0 % no related videos after end
+    %         }
+    %     ]{}{http://www.youtube.com/embed/1WEgNQjL66g}
+    % %     &autoPlay=true
+    % %     &Loop=false}
+    % %     ]{\fbox{Click!}}{VPlayer.swf}
 
     %\pdfpcmovie{\includegraphics[width=.3\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
 
