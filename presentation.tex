@@ -1,121 +1,99 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{basileabeam}
-
-%notes
+\usepackage{epigraph}
+\usepackage{graphicx}
+\usepackage{multirow}
+%\usepackage{enumitem}
+\usepackage{array}
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{pdfpc-movie}
+\usepackage{tikz}
+%\usepackage{xkeyval}
+%\usepackage{palatino}
+%\usepackage{pgfpages}
+%\usepackage[font=Times,timeinterval=1, timeduration=200,resetatpages=all]{tdclock}
+\usepackage[timeinterval=1]{tdclock}
+%\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+%*-------------------------------------------------------------------------------
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%*-------------------------------------------------------------------------------
 %\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 %\setbeamertemplate{note page}[plain]
 %\setbeameroption{show notes on second screen=bottom}
-
-\title              {Estatística aplicada à pesquisa}
+%*-------------------------------------------------------------------------------
+\setbeameroption{hide notes}
+%\setbeameroption{show only notes}
+%\setbeameroption{show notes on second screen=right}
+\setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}
+%*-------------------------------------------------------------------------------
+\title              {Programa de formação em Robótica - Desafio 2.5}
 \author             {Marco Reis}
 \email              {marcoreis@me.com}
 \institute          {Laboratório de Robótica e Sistemas Autônomos, Senai Cimatec}
-\date               {Fevereiro de 2020}
+\date               {Abril de 2020}
 \ulogo        		{Template/logosenaicimatec}
 \ulogoo        		{Template/fibonacci}
 \ulistelement    	{Template/sunflower}
-
-\graphicspath{{Figures/}}
-
+%*-------------------------------------------------------------------------------
+\graphicspath{{Media/pictures/}}
+%*-------------------------------------------------------------------------------
 \totalNoSlidesDisabled % To turn off the total number of slides in the footer. Comment this if you want the total number of slides in the footer
-
+%*-------------------------------------------------------------------------------
 \begin{document}
-%----------- COVER ------------------------------------------------------------
-\begin{frame}[t,plain]
+%*----------- COVER -------------------------------------------------------------
+ \begin{frame}[t,plain]
+%*----------- sound
+    \includemedia[
+        %width=1ex,
+        %height=1ex,
+        activate=pageopen, 
+        deactivate=onclick,
+        %passcontext,
+        transparent,
+        addresource=./Media/sounds/loop-mix.mp3,
+        flashvars={
+                    source=./Media/sounds/loop-mix.mp3
+                    %&autoPlay=true
+                    &autoRewind=true
+                    &Play=2s
+                    &repeat=always
+                    %&Loop=true
+                }
+                ]
+    {}{VPlayer.swf}
+%*----------- start-page
     \titlepage
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Some Images}
-    \begin{columns}[c]
-        \column{.55\textwidth}
-            \includegraphics[width=0.8\textwidth]{block}
-        \column{.45\textwidth}
-            Turing machine
-    \end{columns}
-\end{frame}
+%*----------- SECTIONS ----------------------------------------------------------
+\input{Sections/01-introducao}
+\input{Sections/02-desafios}
+\input{Sections/03-lideranca}
+\input{Sections/04-orientacoes-finais}
 %-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Some Images}
-    \begin{figure}
-        \includegraphics[width=0.8\textwidth]{turingmachine}
-        \caption{A Turing Machine.}
-    \end{figure}
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Some Equations}
-Now we introduce an equation.
-    \begin{theorem}
-    A Turing Machine is a 7-Tuple:
-        \begin{equation}
-        \label{eq:turi}
-            M = \langle Q, \Gamma, b, \Sigma, \delta, q_0, F \rangle
-        \end{equation}
-    \end{theorem}
-A Turing Machine is a 7-Tuple even if defined in the text, as in $M = \langle Q, \Gamma, b, \Sigma, \delta, q_0, F \rangle$.
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[t]{Items and Numbers}
-    \begin{columns}
-        \column{.5\textwidth}
-            \begin{itemize}
-                \item one
-                \item two
-                \item three
-            \end{itemize}
-        \column{.5\textwidth}
-            \begin{enumerate}
-                \item first
-                \item second
-                \item third
-            \end{enumerate}
-    \end{columns}
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Tables}
-Tables are also interesting.
-    \begin{table}[ht!]
-    \centering
-        \begin{tabular}{|l|c|l|} \hline
-            Title&$f$&Comments\\ \hline
-            The chemical basis of morphogenesis & 7327 & \\ \hline
-            On computable numbers & 6347 & Turing Machine\\ \hline
-            Computing machinery and intelligence & 6130 & \\ \hline
-        \end{tabular}
-    \end{table}
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Speaker Notes}
-You may turn on the notes and handout option to see the notes to the slides.
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- BACKUP -----------------------------------------------------------
-\backupbegin
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}{Backup}
-Test
-\end{frame}
-%-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-
-\backupend
-%----------- QUESTIONS --------------------------------------------------------
+%*----------- SLIDE-BACKUP ------------------------------------------------------
+% \backupbegin
+% %
+% \begin{frame}{Backup}
+%     Test
+% %*----------- notes
+%     \note{Notes can help you to remember important information. Turn on the notes option.}
+% \end{frame}
+% %-
+% \backupend
+% %-
+%*----------- QUESTIONS ---------------------------------------------------------
 \begin{frame}[t,plain]
-\lastpage{{\usebeamerfont{title} Questions?}\\[3ex] \hspace{0.1cm} marcoreis@me.com}
+    \lastpage{{\usebeamerfont{title} Questions?}\\[3ex] \hspace{0.1cm} marcoreis@me.com}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
-\note{Notes can help you to remember important information. Turn on the notes option.}
-%------------------------------------------------------------------------------
 \end{document}
-

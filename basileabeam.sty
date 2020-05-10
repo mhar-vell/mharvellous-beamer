@@ -5,7 +5,8 @@
 
 \usepackage[utf8]{inputenc}
 
-\graphicspath{{Figures/}}
+\graphicspath{{Media/pictures/}}
+%\addmediapath{{Figures/sound/}}
 
 \mode<presentation>
 
@@ -57,7 +58,8 @@
 
 % Colors.
 %\definecolor{hcolor}{RGB}{165,198,214} % Color 1
-\definecolor{hcolor}{RGB}{60,61,61} % Color 1
+\definecolor{hcolor}{RGB} {215,215,215} % Color 1
+%\definecolor{hcolor}{RGB} {167,200,196} % Color 1
 \definecolor{lcolor}{RGB}{45,55,60} % Color 3
 \definecolor{highlightcolor}{RGB}{210,5,55} % Color 5
 
@@ -71,11 +73,11 @@
 \definecolor{bcolor7}{RGB}{190,195,200}
 \definecolor{bcolor8}{RGB}{0,110,110}
 %\definecolor{bcolor9}{RGB}{0,0,0}
-\definecolor{bcolor9}{RGB}{210,214,214}
+\definecolor{bcolor9}{RGB}{254,178,54}
 \definecolor{bcolor10}{RGB}{255,255,255}
 
 \setbeamercolor*{palette primary}{fg=black,bg=white}
-\setbeamercolor*{palette highlight}{fg=white,bg=hcolor}
+\setbeamercolor*{palette highlight}{fg=black,bg=hcolor}
 \setbeamercolor*{palette line}{fg=black,bg=lcolor}
 \setbeamercolor*{title page header}{parent=palette highlight}
 \setbeamercolor*{titlelike}{bg=black}
@@ -216,6 +218,7 @@
         \usebeamerfont{date}\insertdate%
     }
     \end{beamercolorbox}
+
 }
 \defbeamertemplate*{title page}{fancy}[1][]
 {
