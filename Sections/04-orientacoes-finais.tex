@@ -51,3 +51,28 @@
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
  \end{frame}
  %-
+ %*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[fragile]{A importância atual da robótica}
+    Para a implentação de R gráficos deve-se realizar os seguintes comando no ambiente R:
+    \begin{lstlisting}[language=R]
+        tikz("./img-marco2.tex", 
+            width = beamer.parms$textwidth, 
+            height = beamer.parms$textheight)
+        ggqqplot(na.omit(mr_histo$dados3))
+        dev.off()
+    \end{lstlisting}
+    \begin{columns}
+        \column{.01\textwidth}
+        \column{.49\textwidth}
+   
+        \column{.5\textwidth}
+            \begin{tikzpicture}[thick, scale=0.4, every node/.style={scale=0.4}]
+                \node[at=(current page.center)] {
+                    \input{./Media/r-graphics/img-marco1.tex}
+                };
+            \end{tikzpicture}
+    \end{columns}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+ \end{frame}
+ %-
