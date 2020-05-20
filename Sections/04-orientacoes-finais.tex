@@ -50,28 +50,48 @@
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
  \end{frame}
- %-
- %*----------- SLIDE -------------------------------------------------------------
+%-
+%*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[fragile]{A importância atual da robótica}
     Para a implentação de R gráficos deve-se realizar os seguintes comando no ambiente R:
     \begin{lstlisting}[language=R]
-        tikz("./img-marco2.tex", 
+        library(tikzDevice)
+        beamer.parms = list(paperwidth   = 364.19536/72,
+                    paperheight  = 273.14662/72,
+                    textwidth    = 307.28987/72,
+                    textheight   = 269.14662/72)
+        tikz("./your_file.tex", 
             width = beamer.parms$textwidth, 
             height = beamer.parms$textheight)
-        ggqqplot(na.omit(mr_histo$dados3))
+        ggqqplot(na.omit(my_data$col2))
         dev.off()
     \end{lstlisting}
+
     \begin{columns}
         \column{.01\textwidth}
         \column{.49\textwidth}
    
         \column{.5\textwidth}
-            \begin{tikzpicture}[thick, scale=0.4, every node/.style={scale=0.4}]
+            \centering
+            \begin{tikzpicture}[thick, scale=0.4, every node/.style={scale=0.1}]
                 \node[at=(current page.center)] {
-                    \input{./Media/r-graphics/img-marco1.tex}
+               %\input{./Media/r-graphics/img-marco1.tex}
+                \input{./Media/r-graphics/graficox.tex}
                 };
             \end{tikzpicture}
     \end{columns}
+%*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+ \end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{A importância atual da robótica}
+    \centering
+    \begin{tikzpicture}[thick, scale=0.4, every node/.style={scale=0.7}]
+        \node[at=(current page.center)] {
+        \input{./Media/r-graphics/graficox.tex}
+        };
+    \end{tikzpicture}
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
  \end{frame}
