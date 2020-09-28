@@ -58,10 +58,13 @@
 
 % Colors.
 %\definecolor{hcolor}{RGB}{165,198,214} % Color 1
-\definecolor{hcolor}{RGB} {215,215,215} % Color 1
+\definecolor{hcolor}{RGB} {200,210,236} % Color 1 - Paleta cores Senai Cimatec
+%\definecolor{hcolor}{RGB} {215,215,215} % Color 1
 %\definecolor{hcolor}{RGB} {167,200,196} % Color 1
-\definecolor{lcolor}{RGB}{45,55,60} % Color 3
-\definecolor{highlightcolor}{RGB}{210,5,55} % Color 5
+\definecolor{lcolor}{RGB}{0,7,46} % Color 3 - Paleta cores Senai Cimatec
+%\definecolor{lcolor}{RGB}{45,55,60} % Color 3
+%\definecolor{highlightcolor}{RGB}{210,5,55} % Color 5
+\definecolor{highlightcolor}{RGB}{255,186,0} % Color 5 - Paleta cores Senai Cimatec
 
 %% Official color sequence
 \definecolor{bcolor1}{RGB}{165,215,210}
@@ -87,7 +90,7 @@
 \setbeamercolor*{item}{fg=hcolor}
 \setbeamercolor*{page footer}{parent=palette highlight}
 \setbeamercolor*{alerted text}{fg=highlightcolor}
-\hypersetup{colorlinks=false,linkcolor=hcolor,urlcolor=hcolor,citecolor=lcolor}
+\hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
 \setbeamercolor{note page}{bg=white, fg=black}
 
@@ -170,7 +173,7 @@
 
     \begin{tikzpicture}[remember picture,overlay]
 		\node[%
-    yshift=-18.5em,xshift=31.5em
+    yshift=-18.5em,xshift=29em
     ] (img) at (current page.north west) [anchor=north west]{%
 			\includegraphics[height=\ulogoheightint]{\ulogoint}};
     \end{tikzpicture}
@@ -335,7 +338,10 @@
     \usebeamerfont{title in head/foot}\insertshorttitle{}
 \end{beamercolorbox}%
 \begin{beamercolorbox}[wd=0.15\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
-    \usebeamerfont{title in head/foot}\insertauthor{}
+    %\usebeamerfont{title in head/foot}\insertauthor{}
+    \centering
+    \vspace*{-0.1cm}
+    \includegraphics[height=3.5ex]{\ulogoint}
 \end{beamercolorbox}%
 \begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,right,leftskip=2ex]{page footer}%
     \centering
