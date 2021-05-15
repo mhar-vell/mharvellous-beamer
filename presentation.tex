@@ -10,6 +10,7 @@
 %\bibliography{bibliography}
 %\usepackage[backend=biber,style=alphabetic,citestyle=authoryear]{biblatex}
 % \addbibresource{bibliography.bib}
+
 \usepackage{marcoreis}
 \usepackage{epigraph}
 \usepackage{graphicx}
@@ -29,6 +30,42 @@
 %\usepackage[font=Times,timeinterval=1, timeduration=200,resetatpages=all]{tdclock}
 \usepackage[timeinterval=1]{tdclock}
 %\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+%\usepackage{natbib}
+\usepackage{xfrac}
+\usepackage{bibentry}
+\usepackage{threeparttable}
+\usepackage{framed, color}
+\definecolor{shadecolor}{RGB}{47,48,49}
+%\DeclareUnicodeCharacter{0301}{\'{e}}
+
+\usepackage[tikz]{bclogo}
+% \presetkeys{bclogo}{
+% ombre=true,
+% epBord=3,
+% couleur = blue!15!white,
+% couleurBord = red,
+% arrondi = 0.2
+% }{}
+\usepackage{url}
+\usepackage{tabularx,booktabs}
+\usepackage{color,soul}
+%\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{units}
+\usepackage{spot}
+\setspotlightcolor{red!50}
+%\setspotlightstyle{star, fill=red!50}
+%\setspotlightstyle{star points=7}
+%*-------------------------------------------------------------
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+    \raggedright#2
+  \end{minipage}%
+  }%
+}
+
 %*-------------------------------------------------------------------------------
 %\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -44,14 +81,16 @@
 %\setbeameroption{show notes on second screen=right}
 \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}
 %*-------------------------------------------------------------------------------
-\title              {Programa de formação em Robótica - Desafio 2.5}
+\title              {Desafio 2.5}
+\subtitle           {Programa de formação em Robótica}
 \author             {Marco Reis}
 \email              {marcoreis@me.com}
-\institute          {Laboratório de Robótica e Sistemas Autônomos, Senai Cimatec}
+\institute          {Robótica e Sistemas Autônomos, Senai Cimatec}
 \date               {Abril de 2020}
-\ulogo        		{Template/logosenaicimatec2020}
-\ulogoo        		{Template/fibonacci}
-\ulistelement    	{Template/sunflower}
+\ulogo        		{Template/logosenaicimatecnegativo}
+\ulogof             {Template/logosenaicimatec2}
+\ulogoo        		{Template/rosa-logo-black}
+\ulistelement    	{Template/bullet-white}
 %*-------------------------------------------------------------------------------
 \graphicspath{{Media/pictures/}}
 %*-------------------------------------------------------------------------------
