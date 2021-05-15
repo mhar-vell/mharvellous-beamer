@@ -87,22 +87,22 @@
 \definecolor{bcolor11}{RGB}{0,7,46} % Color 3 - senaicimatec2020
 
 \setbeamercolor*{palette primary}{fg=black,bg=white}
-\setbeamercolor*{palette highlight}{fg=black,bg=rbcolor}
+\setbeamercolor*{palette highlight}{fg=black,bg=lcolor}
 \setbeamercolor*{palette line}{fg=black,bg=hcolor}
 \setbeamercolor*{title page header}{parent=palette highlight}
 \setbeamercolor*{titlelike}{bg=black}
-\setbeamercolor*{title}{bg=rbcolor,fg=black}
-\setbeamercolor*{frametitle}{bg=hcolor,fg=black}
-%\setbeamercolor*{framesubtitle}{bg=c5color,fg=black}
+\setbeamercolor*{title}{bg=highlightcolor,fg=black}
+\setbeamercolor*{frametitle}{bg=lcolor,fg=black}
+%\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
 \setbeamercolor*{lineup}{parent=palette line}
 \setbeamercolor*{part title}{bg=bcolor11,fg=black}
-\setbeamercolor*{item}{fg=c5color}
+\setbeamercolor*{item}{fg=highlightcolor}
 \setbeamercolor*{page footer}{fg=white,bg=lcolor}
 \setbeamercolor*{alerted text}{fg=highlightcolor}
-\setbeamercolor*{background canvas}{bg=lcolor}
-\hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=hcolor}
+\setbeamercolor*{background canvas}{bg=rbcolor}
+\hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
-\setbeamercolor*{normal text}{fg=hcolor}
+\setbeamercolor*{normal text}{fg=lcolor}
 
 %\setbeamercolor{note page}{bg=white, fg=black}
 \setbeamercolor{note page}{bg=white, fg=black}
@@ -187,9 +187,9 @@
     %% Top Logo positioned with tikz
     \begin{tikzpicture}[remember picture,overlay]
 		\node[%
-    yshift=-1.5em,xshift=34em
+    yshift=-1.5em,xshift=33.5em
     ] (img) at (current page.north west) [anchor=north west]{%
-			\includegraphics[scale=0.15]{\ulogooint}};
+			\includegraphics[scale=0.23]{\ulogooint}};
     \end{tikzpicture}
 
     \begin{tikzpicture}[remember picture,overlay]
@@ -211,7 +211,7 @@
     \vskip-8ex
     %\hskip14ex
     {\Large
-    {\usebeamerfont{title}\usebeamercolor[lcolor]{title}\inserttitle\par}%
+    {\usebeamerfont{title}\usebeamercolor[highlightcolor]{title}\inserttitle\par}%
     }
     %\usebeamerfont{subtitle}\inserttitle\par%
     \ifx\insertsubtitle\@empty%
@@ -237,7 +237,7 @@
        		\ifx\insertemail\@empty%
        		\\[1ex]%
        		\else%
-       		\usebeamerfont{email}\textcolor{hcolor}{\textless \insertemail \textgreater}\\[1ex]%
+       		\usebeamerfont{email}\textcolor{lcolor}{\textless \insertemail \textgreater}\\[1ex]%
        		\fi%}
        }\else{%
        	\\[1ex]%
@@ -278,7 +278,7 @@
 \def\beamer@decolines@truetext{true}%
 \vskip-.5\beamer@leftmargin%
 \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-    \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+    \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
 \end{beamercolorbox}%
 }
 
@@ -338,8 +338,8 @@
 % Blocks (box)
 \setbeamertemplate{blocks}[shadow=true]
 \setbeamertemplate{theorems}[normal font]
-\setbeamercolor{block title}{fg=white,bg=hcolor!100}
-\setbeamercolor{block body}{bg=hcolor!40}
+\setbeamercolor{block title}{fg=gcolor,bg=hcolor!100}
+\setbeamercolor{block body}{fg=gcolor,bg=hcolor!40}
 \setbeamercolor{block body example}{bg=hcolor!40}
 
 % Adjust caption
@@ -378,7 +378,7 @@
 \end{beamercolorbox}}%
 }
 
-% Bibliography
+% % Bibliography
 % \usepackage[backend=biber,style=authoryear,hyperref=false]{biblatex}
 % \defbibenvironment{bibliography}
 %   {\list{}
