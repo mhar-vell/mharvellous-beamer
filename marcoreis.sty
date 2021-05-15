@@ -386,6 +386,23 @@
         \includegraphics[width=#3]{#4}};
     }] {};}
 
+%round word
+\newcommand\tikznode[3][]{%
+  \tikz[remember picture,baseline=(#2.base)]
+    \node[minimum size=0pt,inner sep=0pt,#1](#2){#3};%
+}
+%
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+    \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+\definecolor{shadecolor}{RGB}{255,186,0}
+
+
 % % Bibliography
 % \usepackage[backend=biber,style=authoryear,hyperref=false]{biblatex}
 % \defbibenvironment{bibliography}
