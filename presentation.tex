@@ -1,4 +1,15 @@
 \documentclass[aspectratio=169]{beamer}
+\usepackage{bibunits}  
+%\setbeamertemplate{bibliography item}{[\theenumiv]}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\defaultbibliography{bibliography}
+%\defaultbibliographystyle{IEEEtran}
+%\defaultbibliographystyle{amsalpha}
+\defaultbibliographystyle{abntex2-alf}
+
+%\bibliography{bibliography}
+%\usepackage[backend=biber,style=alphabetic,citestyle=authoryear]{biblatex}
+% \addbibresource{bibliography.bib}
 \usepackage{marcoreis}
 \usepackage{epigraph}
 \usepackage{graphicx}
