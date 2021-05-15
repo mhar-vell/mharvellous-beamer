@@ -20,6 +20,7 @@
 
 % Text to be set for frontpage
 \newcommand*{\ulogo}[1]{\def\ulogoint{#1}}
+\newcommand*{\ulogof}[1]{\def\ulogofint{#1}}
 \newcommand*{\ulogoo}[1]{\def\ulogooint{#1}}
 \newcommand*{\ulistelement}[1]{\def\ulistelementint{#1}}
 
@@ -58,13 +59,18 @@
 
 % Colors.
 %\definecolor{hcolor}{RGB}{165,198,214} % Color 1
-\definecolor{hcolor}{RGB} {200,210,236} % Color 1 - Paleta cores Senai Cimatec
 %\definecolor{hcolor}{RGB} {215,215,215} % Color 1
 %\definecolor{hcolor}{RGB} {167,200,196} % Color 1
-\definecolor{lcolor}{RGB}{0,7,46} % Color 3 - Paleta cores Senai Cimatec
-%\definecolor{lcolor}{RGB}{45,55,60} % Color 3
-%\definecolor{highlightcolor}{RGB}{210,5,55} % Color 5
-\definecolor{highlightcolor}{RGB}{255,186,0} % Color 5 - Paleta cores Senai Cimatec
+\definecolor{hcolor}{RGB} {200,210,236} % Color 1 - senaicimatec2020 azul-cinza
+\definecolor{c2color}{RGB} {194,232,0} % Color 2 - senaicimatec2020 verde
+\definecolor{lcolor}{RGB}{0,7,46} % Color 3 - senaicimatec2020 azul-negro
+\definecolor{highlightcolor}{RGB}{255,186,0} % Color 4 - senaicimatec2020 laranja
+\definecolor{c5color}{RGB}{0,224,255} % Color 5 - senaicimatec2020 azul-claro
+\definecolor{rbcolor}{RGB}{44,98,181} % Color 6 - Paleta cores Senai Cimatec azul-clássico-senai
+\definecolor{gcolor}{RGB}{47,48,49} % Color 7 - Paleta cores Senai Cimatec cinza@letra
+%\setbeamercolor{background canvas}{bg=lcolor}
+%\setbeamercolor{background canvas}{bg=blue}
+%j predefined colors: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
 
 %% Official color sequence
 \definecolor{bcolor1}{RGB}{165,215,210}
@@ -78,24 +84,31 @@
 %\definecolor{bcolor9}{RGB}{0,0,0}
 \definecolor{bcolor9}{RGB}{254,178,54}
 \definecolor{bcolor10}{RGB}{255,255,255}
+\definecolor{bcolor11}{RGB}{0,7,46} % Color 3 - senaicimatec2020
 
-\setbeamercolor*{palette primary}{fg=black,bg=white}
-\setbeamercolor*{palette highlight}{fg=black,bg=hcolor}
-\setbeamercolor*{palette line}{fg=black,bg=lcolor}
+\setbeamercolor*{palette primary}{fg=lcolor,bg=white}
+\setbeamercolor*{palette highlight}{fg=black,bg=lcolor}
+\setbeamercolor*{palette line}{fg=black,bg=hcolor}
 \setbeamercolor*{title page header}{parent=palette highlight}
 \setbeamercolor*{titlelike}{bg=black}
-\setbeamercolor*{frametitle}{bg=black,fg=black}
+\setbeamercolor*{title}{bg=highlightcolor,fg=black}
+\setbeamercolor*{frametitle}{bg=lcolor,fg=black}
+%\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
 \setbeamercolor*{lineup}{parent=palette line}
-\setbeamercolor*{part title}{bg=black,fg=black}
-\setbeamercolor*{item}{fg=hcolor}
-\setbeamercolor*{page footer}{parent=palette highlight}
+\setbeamercolor*{part title}{bg=bcolor11,fg=black}
+\setbeamercolor*{item}{fg=highlightcolor}
+\setbeamercolor*{page footer}{fg=white,bg=lcolor}
 \setbeamercolor*{alerted text}{fg=highlightcolor}
+\setbeamercolor*{background canvas}{bg=rbcolor}
 \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
+\setbeamercolor*{normal text}{fg=lcolor}
+
+%\setbeamercolor{note page}{bg=white, fg=black}
 \setbeamercolor{note page}{bg=white, fg=black}
 
-\setbeamercovered{transparent}
 
+\setbeamercovered{transparent}
 
 % Lengths.
 \newlength{\beamer@fancy@lineup}
@@ -109,7 +122,7 @@
 % This particular setting is because 1ex pdflatex < 1ex xelatex
 % sets the height of the logo
 \ifpdf
-\def\ulogoheightint{5ex}
+\def\ulogoheightint{4ex}
 \else
 \def\ulogoheightint{4ex}
 \fi
@@ -125,10 +138,13 @@
 % This is only available for xe/luatex
 \ifpdf % do not use this on non xe/luatex
 % nothing
+
 \else
-\usefonttheme{professionalfonts}
+%\usefonttheme{professionalfonts}
+\usefonttheme{structurebold}
 \usepackage{fontspec}%	
 \newfontfamily\utitlefont{Georgia}%
+%\newfontfamily\utitlefont{Gotham}%
 \setmainfont{Arial}%
 \setsansfont{Arial}%
 \fi
@@ -137,14 +153,19 @@
 \setbeamerfont{email}{size={\fontsize{6}{12}}}
 \setbeamerfont{institute}{size={\fontsize{8}{12}}}
 \setbeamerfont{date}{size={\fontsize{8}{12}}}
-\setbeamerfont{title in head/foot}{series=\mdseries,size={\fontsize{6}{6}}}
-\setbeamerfont{information}{family=\sffamily}
+\setbeamerfont{title in head/foot}{series=\mdseries, size={\fontsize{6}{6}}}
+\setbeamerfont{information}{family=\ttfamily}
+\setbeamerfont{title}{family=\sffamily, series=\bfseries, size={\fontsize{32}{34}}}
+\setbeamerfont{frametitle}{family=\sffamily, series=\mdseries, size={\fontsize{20}{22}}}
+\setbeamerfont{framesubtitle}{family=\ttfamily, series=\mdseries, shape=\scshape, size={\fontsize{14}{14}}}
+\setbeamerfont{normal text}{family=\ttfamily, series=\mdseries}
+\setbeamerfont{subtitle}{family=\ttfamily, series=\mdseries, shape=\scshape, size={\fontsize{14}{14}}}
 % again, the special utitlefont is only available on xe/luatex
 \ifpdf
 % nothing
 \else
 \setbeamerfont{title}{family=\utitlefont}
-\setbeamerfont{frametitle}{family=\utitlefont}
+\setbeamerfont{frametitle}{size={\fontsize{14}{14}}, family=\utitlefont}
 \fi
 
 \DeclareTextFontCommand{\emph}{\bfseries}
@@ -166,16 +187,17 @@
     %% Top Logo positioned with tikz
     \begin{tikzpicture}[remember picture,overlay]
 		\node[%
-    yshift=-0.2em,xshift=1.5em
+    yshift=-1.5em,xshift=33.5em
     ] (img) at (current page.north west) [anchor=north west]{%
-			\includegraphics[scale=0.04]{\ulogooint}};
+			\includegraphics[scale=0.23]{\ulogooint}};
     \end{tikzpicture}
 
     \begin{tikzpicture}[remember picture,overlay]
 		\node[%
-    yshift=-18.5em,xshift=29em
+    yshift=-18.5em,xshift=26.5em
     ] (img) at (current page.north west) [anchor=north west]{%
-			\includegraphics[height=\ulogoheightint]{\ulogoint}};
+			%\includegraphics[height=\ulogoheightint]{\ulogoint}};
+            \includegraphics[scale=0.22]{\ulogoint}};
     \end{tikzpicture}
     
     \vbox{}\vskip-\beamer@fancy@lineup%
@@ -186,20 +208,24 @@
     %
     
     % Title.
-    \vskip4ex
-    \usebeamerfont{title}\inserttitle\par%
+    \vskip-8ex
+    %\hskip14ex
+    {\Large
+    {\usebeamerfont{title}\usebeamercolor[highlightcolor]{title}\inserttitle\par}%
+    }
+    %\usebeamerfont{subtitle}\inserttitle\par%
     \ifx\insertsubtitle\@empty%
     \else%
-    \vskip0.25ex%
-    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \vskip10.25ex%
+    {\usebeamerfont{subtitle}\usebeamercolor[hcolor]{subtitle}\insertsubtitle\par}%
     \fi%  
     \def\beamer@decolines@truetext{true}%
     \vskip-.25\beamer@leftmargin%
     
     \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-        \usebeamercolor[bg]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+        \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
     \end{beamercolorbox}%
-    \vspace{2ex}%
+    \vspace{5ex}%
     
     % Authors, institute and date
     \begin{beamercolorbox}[wd=\textwidth]{author}
@@ -217,7 +243,7 @@
        	\\[1ex]%
     	}%
     	\fi%
-        \usebeamerfont{institute}\insertinstitute \\[1ex]%
+        \usebeamerfont{institute}\insertinstitute \\[6ex]%
         \usebeamerfont{date}\insertdate%
     }
     \end{beamercolorbox}
@@ -252,7 +278,7 @@
 \def\beamer@decolines@truetext{true}%
 \vskip-.5\beamer@leftmargin%
 \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-    \usebeamercolor[bg]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+    \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
 \end{beamercolorbox}%
 }
 
@@ -260,14 +286,13 @@
 \defbeamertemplate*{frametitle continuation}{decolines theme}{(\insertcontinuationcount)}
 
 % List elements
-\defbeamertemplate{itemize item}{image}{\small\includegraphics[height=1.6ex]{\ulistelementint}}
-\defbeamertemplate{itemize subitem}{image}{\scriptsize\includegraphics[height=1.6ex]{\ulistelementint}}
-\defbeamertemplate{itemize subsubitem}{image}{\tiny\includegraphics[height=1.6ex]{\ulistelementint}}
+\defbeamertemplate{itemize item}{image}{\small\includegraphics[height=1.1ex]{\ulistelementint}}
+\defbeamertemplate{itemize subitem}{image}{\scriptsize\includegraphics[height=1.1ex]{\ulistelementint}}
+\defbeamertemplate{itemize subsubitem}{image}{\tiny\includegraphics[height=1.1ex]{\ulistelementint}}
 
 \setbeamertemplate{itemize item}[image]
 \setbeamertemplate{itemize subitem}[image]
 \setbeamertemplate{itemize subsubitem}[image]
-
 
 % Last slide
 \newenvironment{changemargin}[2]{
@@ -288,14 +313,14 @@
         \column{.6\textwidth}
             {\parskip0pt\offinterlineskip%
             \hbox{\hskip-\Gm@lmargin\hbox{\vbox{%
-            \vbox{}\vskip-1.75ex%
+            \vbox{}\vskip-1.15ex%
             \begin{beamercolorbox}[wd=\textwidth,ht=\paperheight]{title page header}
             \end{beamercolorbox}%
             \begin{tikzpicture}[remember picture,overlay]
                 \node[%
-            yshift=-4.5em,xshift=5.5em
+            yshift=-4.5em,xshift=3em
             ] (img) at (current page.north west) [anchor=north west]{%
-                    \includegraphics[scale=0.2]{Template/questionmark7}};
+                    \includegraphics[scale=0.3]{Template/questionmark8}};
             \end{tikzpicture}
             \vbox{}\vskip-\beamer@fancy@lineup%
             \vbox{}\vskip-\beamer@fancy@linemid%
@@ -303,7 +328,7 @@
             \hskip-\Gm@rmargin%
             }}\hfil%
             \vskip4ex
-        \column{.4\textwidth}
+        \column{.5\textwidth}
             {\raggedright {#1}}
     \end{columns}
   \end{changemargin}
@@ -311,10 +336,10 @@
 
 
 % Blocks (box)
-\setbeamertemplate{blocks}[shadow=false]
+\setbeamertemplate{blocks}[shadow=true]
 \setbeamertemplate{theorems}[normal font]
-\setbeamercolor{block title}{fg=white,bg=hcolor!100}
-\setbeamercolor{block body}{bg=hcolor!40}
+\setbeamercolor{block title}{fg=gcolor,bg=hcolor!100}
+\setbeamercolor{block body}{fg=gcolor,bg=hcolor!40}
 \setbeamercolor{block body example}{bg=hcolor!40}
 
 % Adjust caption
@@ -335,14 +360,17 @@
 {
 \hbox{%
 \begin{beamercolorbox}[wd=0.75\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
-    \usebeamerfont{title in head/foot}\insertshorttitle{}
+    \usebeamerfont{title in head/foot}\insertshorttitle{} : \insertauthor{}
+    %\usebeamercolor[bg]{bcolor11}
 \end{beamercolorbox}%
+
 \begin{beamercolorbox}[wd=0.15\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
     %\usebeamerfont{title in head/foot}\insertauthor{}
     \centering
     \vspace*{-0.1cm}
     \includegraphics[height=3.5ex]{\ulogoint}
 \end{beamercolorbox}%
+
 \begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,right,leftskip=2ex]{page footer}%
     \centering
     \usebeamerfont{title in head/foot}%
@@ -350,7 +378,32 @@
 \end{beamercolorbox}}%
 }
 
-% Bibliography
+%rouded picture
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+
+%round word
+\newcommand\tikznode[3][]{%
+  \tikz[remember picture,baseline=(#2.base)]
+    \node[minimum size=0pt,inner sep=0pt,#1](#2){#3};%
+}
+%
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+    \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+\definecolor{shadecolor}{RGB}{255,186,0}
+
+
+% % Bibliography
 % \usepackage[backend=biber,style=authoryear,hyperref=false]{biblatex}
 % \defbibenvironment{bibliography}
 %   {\list{}
@@ -387,4 +440,4 @@
     \gdef\beamer@noteitems{}% 
     \gdef\beamer@notes{}% 
 }
-\makeatother
+\makeatother 

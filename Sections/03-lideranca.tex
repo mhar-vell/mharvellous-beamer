@@ -5,8 +5,8 @@
         \column{.01\textwidth}
         \column{.7\textwidth}
             \begin{itemize}
-                \item equipe RAJA será liderada por Aziel Freitas
-                \item equipe BORG será liderada por Mateus Cerqueira.
+                \item equipe \tikznode{cmark}{RAJA} será liderada por Aziel Freitas
+                \item equipe \Circled[outer color=red, inner ysep=8pt]{BORG} será liderada por Mateus Cerqueira.
                 \item equipe TIMON-HM será liderada por Leonardo Lima.
             \end{itemize}
         \column{.29\textwidth}
@@ -15,6 +15,10 @@
     \vspace{1cm}
     
     \emph{Para este desafio não será cobrado o relatório técnico, porém o acompanhamento deverá seguir o mesmo ritmo dos desafios anteriores.}
+    
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[red,very thick] (cmark) circle[x radius=8mm,y radius=4mm]; 
+    \end{tikzpicture}
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
