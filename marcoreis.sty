@@ -28,6 +28,8 @@
 %\newcommand*{\email}[1]{\def\insertemail{#1}}
 \newcommand*{\email}[1]{\ifdefined\email \def\insertemail{#1}\fi}
 
+\newcommand*{\advisor}[1]{\ifdefined\advisor \def\insertadvisor{#1}\fi}
+
 % Turn off navigation symbols.
 \setbeamertemplate{navigation symbols}{}
 
@@ -243,7 +245,8 @@
        	\\[1ex]%
     	}%
     	\fi%
-        \usebeamerfont{institute}\insertinstitute \\[6ex]%
+        \usebeamerfont{author}\insertadvisor \\[0.3ex]
+        \usebeamerfont{institute}\insertinstitute \\[3ex]%
         \usebeamerfont{date}\insertdate%
     }
     \end{beamercolorbox}
