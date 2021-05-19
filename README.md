@@ -1,6 +1,10 @@
 ### SIMPLE Beamer
 A simple presentation template.
 
+# Main Style
+<p align="center">
+  <img src="./img/stylemain.png" alt="Size Limit CLI" width="738">
+</p>
 
 # Style A
 <p align="center">
