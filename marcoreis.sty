@@ -88,25 +88,25 @@
 \definecolor{bcolor10}{RGB}{255,255,255}
 \definecolor{bcolor11}{RGB}{0,7,46} % Color 3 - senaicimatec2020
 
-\definecolor{shadecolor}{RGB}{0,224,255}
+\definecolor{shadecolor}{RGB}{47,48,49}
 
 \setbeamercolor*{palette primary}{fg=lcolor,bg=white}
-\setbeamercolor*{palette highlight}{fg=black,bg=lcolor}
-\setbeamercolor*{palette line}{fg=black,bg=lcolor}
+\setbeamercolor*{palette highlight}{fg=black,bg=rbcolor}
+\setbeamercolor*{palette line}{fg=black,bg=hcolor}
 \setbeamercolor*{title page header}{parent=palette highlight}
 \setbeamercolor*{titlelike}{bg=black}
 \setbeamercolor*{title}{bg=rbcolor,fg=black}
-\setbeamercolor*{frametitle}{bg=rbcolor,fg=black}
+\setbeamercolor*{frametitle}{bg=hcolor,fg=black}
 %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
 \setbeamercolor*{lineup}{parent=palette line}
 \setbeamercolor*{part title}{bg=bcolor11,fg=black}
-\setbeamercolor*{item}{fg=highlightcolor}
-\setbeamercolor*{page footer}{fg=white,bg=lcolor}
+\setbeamercolor*{item}{fg=c5color}
+\setbeamercolor*{page footer}{fg=white,bg=rbcolor}
 \setbeamercolor*{alerted text}{fg=highlightcolor}
-\setbeamercolor*{background canvas}{bg=hcolor}
+\setbeamercolor*{background canvas}{bg=lcolor}
 \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
-\setbeamercolor*{normal text}{fg=gcolor}
+\setbeamercolor*{normal text}{fg=hcolor}
 
 %\setbeamercolor{note page}{bg=white, fg=black}
 \setbeamercolor{note page}{bg=white, fg=black}
@@ -191,9 +191,9 @@
     %% Top Logo positioned with tikz
     \begin{tikzpicture}[remember picture,overlay]
 		\node[%
-    yshift=-1.5em,xshift=33.5em
+    yshift=-1.5em,xshift=34em
     ] (img) at (current page.north west) [anchor=north west]{%
-			\includegraphics[scale=0.23]{\ulogooint}};
+			\includegraphics[scale=0.15]{\ulogooint}};
     \end{tikzpicture}
 
     \begin{tikzpicture}[remember picture,overlay]
@@ -201,7 +201,7 @@
     yshift=-18.5em,xshift=26.5em
     ] (img) at (current page.north west) [anchor=north west]{%
 			%\includegraphics[height=\ulogoheightint]{\ulogoint}};
-            \includegraphics[scale=0.06]{\ulogoint}};
+            \includegraphics[scale=0.22]{\ulogoint}};
     \end{tikzpicture}
     
     \vbox{}\vskip-\beamer@fancy@lineup%
@@ -215,19 +215,19 @@
     \vskip-8ex
     %\hskip14ex
     {\Large
-    {\usebeamerfont{title}\usebeamercolor[c5color]{title}\inserttitle\par}%
+    {\usebeamerfont{title}\usebeamercolor[lcolor]{title}\inserttitle\par}%
     }
     %\usebeamerfont{subtitle}\inserttitle\par%
     \ifx\insertsubtitle\@empty%
     \else%
     \vskip10.25ex%
-    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    {\usebeamerfont{subtitle}\usebeamercolor[hcolor]{subtitle}\insertsubtitle\par}%
     \fi%  
     \def\beamer@decolines@truetext{true}%
     \vskip-.25\beamer@leftmargin%
     
     \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-        \usebeamercolor[gcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+        \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
     \end{beamercolorbox}%
     \vspace{5ex}%
     
@@ -283,7 +283,7 @@
 \def\beamer@decolines@truetext{true}%
 \vskip-.5\beamer@leftmargin%
 \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-    \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+    \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
 \end{beamercolorbox}%
 }
 
