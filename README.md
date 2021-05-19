@@ -6,15 +6,6 @@ A simple presentation template.
   <img src="./img/stylemain.png" alt="Size Limit CLI" width="738">
 </p>
 
-# Style A
-<p align="center">
-  <img src="./img/styleA.png" alt="Size Limit CLI" width="738">
-</p>
-
-# Style B
-<p align="center">
-  <img src="./img/styleB.png" alt="Size Limit CLI" width="738">
-</p>
 
 ## How To Use
 
