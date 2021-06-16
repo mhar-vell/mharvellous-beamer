@@ -1,0 +1,24 @@
+\mode<presentation>
+
+\DeclareOptionBeamer{style}{\def\beamer@mytheme@style{#1}}
+\ExecuteOptionsBeamer{style=default} % blue will be default if nothing is given
+\ProcessOptionsBeamer
+
+\def\beamer@mytheme@styleclassic{classic}%
+\def\beamer@mytheme@styledefault{default}%
+\def\beamer@mytheme@styledark{dark}%
+
+\ifx\beamer@mytheme@style\beamer@mytheme@styleclassic%
+    \definecolor{hcolor}{RGB}{0,255,0} % classic
+\else% 
+    \ifx\beamer@mytheme@style\beamer@mytheme@styledark%
+        \definecolor{hcolor}{RGB}{255,0,0} % dark
+    \else% 
+      \definecolor{hcolor}{RGB}{0,0,255} % default
+    \fi%
+\fi%
+
+\setbeamercolor{frametitle}{bg=white,fg=col1}
+
+\mode
+<all>
