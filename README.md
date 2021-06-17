@@ -1,4 +1,4 @@
-### SIMPLE Beamer
+### MHARVELLOUS Beamer
 A simple presentation template.
 
 # Main Style
@@ -22,6 +22,11 @@ $ cd mharvellous-beamer
 $ code .
 
 ```
+*The mharvellous beamer offers 3 distinct styles: default, classic and dark.*
+
+To change the style you must change the following line in the main file **presentation.tex**:
+'\usetheme[style=default]{mhar-vell}'
+
 
 ## Important
 Better to view on **[Okular]**
