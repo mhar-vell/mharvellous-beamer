@@ -3,7 +3,7 @@ A simple presentation template.
 
 # Main Style
 <p align="center">
-  <img src="./img/stylemain.png" alt="Size Limit CLI" width="738">
+  <img src="./img/default.png" alt="Size Limit CLI" width="738">
 </p>
 
 
