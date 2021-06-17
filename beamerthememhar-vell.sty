@@ -9,16 +9,485 @@
 \def\beamer@mytheme@styledark{dark}%
 
 \ifx\beamer@mytheme@style\beamer@mytheme@styleclassic%
-    \definecolor{hcolor}{RGB}{0,255,0} % classic
+    %\definecolor{hcolor}{RGB}{0,255,0} % classic
+        \ulogo        		{Template/logosenaicimatecnegativo}
+        \ulogof             {Template/logosenaicimatec2020}
+        \ulogoo        		{Template/rosa-logo}
+        \ulistelement    	{Template/bullet-white}
+        
+        \definecolor{shadecolor}{RGB}{0,224,255}
+
+        \setbeamercolor*{palette primary}{fg=lcolor,bg=white}
+        \setbeamercolor*{palette highlight}{fg=c5color,bg=lcolor}
+        \setbeamercolor*{palette line}{fg=black,bg=lcolor}
+        \setbeamercolor*{title page header}{parent=palette highlight}
+        \setbeamercolor*{titlelike}{bg=black}
+        \setbeamercolor*{title}{bg=rbcolor,fg=black}
+        \setbeamercolor*{frametitle}{bg=rbcolor,fg=black}
+        %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
+        \setbeamercolor*{lineup}{parent=palette line}
+        \setbeamercolor*{part title}{bg=bcolor11,fg=black}
+        \setbeamercolor*{item}{fg=rbcolor}
+        \setbeamercolor*{page footer}{fg=white,bg=rbcolor}
+        \setbeamercolor*{alerted text}{fg=highlightcolor}
+        \setbeamercolor*{background canvas}{bg=hcolor}
+        \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
+
+        \setbeamercolor*{normal text}{fg=gcolor}
+        % Title page, you should use this in a frame with the [plain] option.
+        \defbeamertemplate*{title page normal}{fancy theme}[1][]{
+            {\parskip0pt\offinterlineskip%
+            \hbox{\hskip-\Gm@lmargin\hbox{\vbox{%
+            \@tempdima=\textwidth\textwidth=\paperwidth\hsize=\textwidth\def\\{,}\vbox{}\vskip-1.5ex%
+            
+            % Top Logo.
+            \begin{beamercolorbox}[wd=\paperwidth,ht=7ex,leftskip=2ex,dp=0.25\paperheight]{title page header}
+                %\includegraphics[height=4ex]{\ulogoint}
+                \newline \newline
+            \end{beamercolorbox}%
+            
+            %% Top Logo positioned with tikz
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-1.5em,xshift=33.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    \includegraphics[scale=0.23]{\ulogooint}};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-18.5em,xshift=26.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    %\includegraphics[height=\ulogoheightint]{\ulogoint}};
+                    \includegraphics[scale=0.06]{\ulogoint}};
+            \end{tikzpicture}
+            
+            \vbox{}\vskip-\beamer@fancy@lineup%
+            \vbox{}\vskip-\beamer@fancy@linemid%
+            }}%
+            \hskip-\Gm@rmargin%
+            }}\hfil%
+            %
+            
+            % Title.
+            \vskip-8ex
+            %\hskip14ex
+            {\Large
+            {\usebeamerfont{title}\usebeamercolor[c5color]{title}\inserttitle\par}%
+            }
+            %\usebeamerfont{subtitle}\inserttitle\par%
+            \ifx\insertsubtitle\@empty%
+            \else%
+            \vskip10.25ex%
+            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+            \fi%  
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.25\beamer@leftmargin%
+            
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[gcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+            \vspace{5ex}%
+            
+            % Authors, institute and date
+            \begin{beamercolorbox}[wd=\textwidth]{author}
+            {%
+                \usebeamerfont{information}%
+                \usebeamerfont{author}\insertauthor \hspace{1ex}
+                % Email is only printed if defined by user with \email{} and there is some content
+            \ifdefined\insertemail{%
+                    \ifx\insertemail\@empty%
+                    \\[1ex]%
+                    \else%
+                    \usebeamerfont{email}\textcolor{lcolor}{\textless \insertemail \textgreater}\\[1ex]%
+                    \fi%}
+            }\else{%
+                \\[1ex]%
+                }%
+                \fi%
+                \usebeamerfont{author}\insertadvisor \\[0.3ex]
+                \usebeamerfont{institute}\insertinstitute \\[3ex]%
+                \usebeamerfont{date}\insertdate%
+            }
+            \end{beamercolorbox}
+
+        }
+        \defbeamertemplate*{title page}{fancy}[1][]
+        {
+            \def\beamer@fancy@truetext{true}%
+            \usebeamertemplate{title page normal}%
+        }
+        % General frame.
+        \defbeamertemplate*{frametitle}{decolines theme}[1][left]
+        {
+            \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+            \@tempdima=\textwidth%
+            \advance\@tempdima by\beamer@leftmargin%
+            \advance\@tempdima by\beamer@rightmargin%
+            \vbox{}\vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[sep=\beamer@leftmargin,#1,wd=\the\@tempdima]{}
+                \usebeamerfont{frametitle}\usebeamercolor[bg]{framesubtitle}%
+                \vbox{}\vskip0ex%
+                \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
+                \strut\insertframetitle\strut\par%
+                {%
+                \ifx\insertframesubtitle\@empty%
+                \else%
+                {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                \fi}%
+                \vskip-1ex%
+                \if@tempswa\else\vskip-\beamer@leftmargin\fi
+            \end{beamercolorbox}%
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+        }
+        % Footer.
+        \defbeamertemplate*{footline}{decolines theme}
+        {
+            \hbox{%
+            \begin{beamercolorbox}[wd=0.75\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                \usebeamerfont{title in head/foot}\insertshorttitle{} : \insertauthor{}
+                %\usebeamercolor[bg]{bcolor11}
+            \end{beamercolorbox}%
+
+            \begin{beamercolorbox}[wd=0.15\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                %\usebeamerfont{title in head/foot}\insertauthor{}
+                \centering
+                \vspace*{-0.1cm}
+                \includegraphics[height=3.5ex]{\ulogofint}
+            \end{beamercolorbox}%
+
+            \begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,right,leftskip=2ex]{page footer}%
+                \centering
+                \usebeamerfont{title in head/foot}%
+                \iftoggle{bbTotalNoSlidesEnabled}{\insertframenumber{} / \inserttotalframenumber}{\insertframenumber{} de \inserttotalframenumber{} }%
+            \end{beamercolorbox}}%
+        }
 \else% 
     \ifx\beamer@mytheme@style\beamer@mytheme@styledark%
-        \definecolor{hcolor}{RGB}{255,0,0} % dark
+        %\definecolor{hcolor}{RGB}{255,0,0} % dark
+        \ulogo        		{Template/logosenaicimatecnegativo}
+        \ulogof             {Template/logosenaicimatec2020}
+        \ulogoo        		{Template/rosa-logo}
+        \ulistelement    	{Template/bullet-white}
+
+        \definecolor{shadecolor}{RGB}{47,48,49}
+
+        \setbeamercolor*{palette primary}{fg=hcolor,bg=white}
+        \setbeamercolor*{palette highlight}{fg=black,bg=rbcolor}
+        \setbeamercolor*{palette line}{fg=black,bg=hcolor}
+        \setbeamercolor*{title page header}{parent=palette highlight}
+        \setbeamercolor*{titlelike}{bg=black}
+        \setbeamercolor*{title}{bg=rbcolor,fg=black}
+        \setbeamercolor*{frametitle}{bg=hcolor,fg=black}
+        %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
+        \setbeamercolor*{lineup}{parent=palette line}
+        \setbeamercolor*{part title}{bg=bcolor11,fg=black}
+        \setbeamercolor*{item}{fg=c5color}
+        \setbeamercolor*{page footer}{fg=gcolor,bg=hcolor}
+        \setbeamercolor*{alerted text}{fg=highlightcolor}
+        \setbeamercolor*{background canvas}{bg=lcolor}
+        \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
+
+        \setbeamercolor*{normal text}{fg=hcolor}
+        % Title page, you should use this in a frame with the [plain] option.
+        \defbeamertemplate*{title page normal}{fancy theme}[1][]{
+            {\parskip0pt\offinterlineskip%
+            \hbox{\hskip-\Gm@lmargin\hbox{\vbox{%
+            \@tempdima=\textwidth\textwidth=\paperwidth\hsize=\textwidth\def\\{,}\vbox{}\vskip-1.5ex%
+            
+            % Top Logo.
+            \begin{beamercolorbox}[wd=\paperwidth,ht=7ex,leftskip=2ex,dp=0.25\paperheight]{title page header}
+                %\includegraphics[height=4ex]{\ulogoint}
+                \newline \newline
+            \end{beamercolorbox}%
+            
+            %% Top Logo positioned with tikz
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-1.5em,xshift=33.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    \includegraphics[scale=0.23]{\ulogooint}};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-18.5em,xshift=26.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    %\includegraphics[height=\ulogoheightint]{\ulogoint}};
+                    \includegraphics[scale=0.22]{\ulogoint}};
+            \end{tikzpicture}
+            
+            \vbox{}\vskip-\beamer@fancy@lineup%
+            \vbox{}\vskip-\beamer@fancy@linemid%
+            }}%
+            \hskip-\Gm@rmargin%
+            }}\hfil%
+            %
+            
+            % Title.
+            \vskip-8ex
+            %\hskip14ex
+            {\Large
+            {\usebeamerfont{title}\usebeamercolor[lcolor]{title}\inserttitle\par}%
+            }
+            %\usebeamerfont{subtitle}\inserttitle\par%
+            \ifx\insertsubtitle\@empty%
+            \else%
+            \vskip10.25ex%
+            {\usebeamerfont{subtitle}\usebeamercolor[hcolor]{subtitle}\insertsubtitle\par}%
+            \fi%  
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.25\beamer@leftmargin%
+            
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+            \vspace{5ex}%
+            
+            % Authors, institute and date
+            \begin{beamercolorbox}[wd=\textwidth]{author}
+            {%
+                \usebeamerfont{information}%
+                \usebeamerfont{author}\insertauthor \hspace{1ex}
+                % Email is only printed if defined by user with \email{} and there is some content
+            \ifdefined\insertemail{%
+                    \ifx\insertemail\@empty%
+                    \\[1ex]%
+                    \else%
+                    \usebeamerfont{email}\textcolor{highlightcolor}{\textless \insertemail \textgreater}\\[1ex]%
+                    \fi%}
+            }\else{%
+                \\[1ex]%
+                }%
+                \fi%
+                \usebeamerfont{author}\insertadvisor \\[0.3ex]
+                \usebeamerfont{institute}\insertinstitute \\[3ex]%
+                \usebeamerfont{date}\insertdate%
+            }
+            \end{beamercolorbox}
+
+        }
+        \defbeamertemplate*{title page}{fancy}[1][]
+        {
+            \def\beamer@fancy@truetext{true}%
+            \usebeamertemplate{title page normal}%
+        }
+        % General frame.
+        \defbeamertemplate*{frametitle}{decolines theme}[1][left]
+        {
+            \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+            \@tempdima=\textwidth%
+            \advance\@tempdima by\beamer@leftmargin%
+            \advance\@tempdima by\beamer@rightmargin%
+            \vbox{}\vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[sep=\beamer@leftmargin,#1,wd=\the\@tempdima]{}
+                \usebeamerfont{frametitle}\usebeamercolor[bg]{framesubtitle}%
+                \vbox{}\vskip0ex%
+                \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
+                \strut\insertframetitle\strut\par%
+                {%
+                \ifx\insertframesubtitle\@empty%
+                \else%
+                {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                \fi}%
+                \vskip-1ex%
+                \if@tempswa\else\vskip-\beamer@leftmargin\fi
+            \end{beamercolorbox}%
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+        }
+        % Footer.
+            \defbeamertemplate*{footline}{decolines theme}
+            {
+                \hbox{%
+                \begin{beamercolorbox}[wd=0.75\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                    \usebeamerfont{title in head/foot}\insertshorttitle{} : \insertauthor{}
+                    %\usebeamercolor[bg]{bcolor11}
+                \end{beamercolorbox}%
+
+                \begin{beamercolorbox}[wd=0.15\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                    %\usebeamerfont{title in head/foot}\insertauthor{}
+                    \centering
+                    \vspace*{-0.1cm}
+                    \includegraphics[height=3.5ex]{\ulogofint}
+                \end{beamercolorbox}%
+
+                \begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,right,leftskip=2ex]{page footer}%
+                    \centering
+                    \usebeamerfont{title in head/foot}%
+                    \iftoggle{bbTotalNoSlidesEnabled}{\insertframenumber{} / \inserttotalframenumber}{\insertframenumber{} de \inserttotalframenumber{} }%
+                \end{beamercolorbox}}%
+            }
     \else% 
-      \definecolor{hcolor}{RGB}{0,0,255} % default
+      %\definecolor{hcolor}{RGB}{0,0,255} % default
+        \ulogo        		{Template/logosenaicimatecnegativo}
+        \ulogof             {Template/logosenaicimatec2020}
+        \ulogoo        		{Template/rosa-logo}
+        \ulistelement    	{Template/bullet-white}
+
+        \definecolor{shadecolor}{RGB}{0,7,46}
+
+        \setbeamercolor*{palette primary}{fg=lcolor,bg=white}
+        \setbeamercolor*{palette highlight}{fg=highlightcolor,bg=lcolor}
+        \setbeamercolor*{palette line}{fg=black,bg=hcolor}
+        \setbeamercolor*{title page header}{parent=palette highlight}
+        \setbeamercolor*{titlelike}{bg=black}
+        \setbeamercolor*{title}{bg=highlightcolor,fg=black}
+        \setbeamercolor*{frametitle}{bg=lcolor,fg=black}
+        %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
+        \setbeamercolor*{lineup}{parent=palette line}
+        \setbeamercolor*{part title}{bg=bcolor11,fg=black}
+        \setbeamercolor*{item}{fg=highlightcolor}
+        \setbeamercolor*{page footer}{fg=gcolor,bg=hcolor}
+        \setbeamercolor*{alerted text}{fg=highlightcolor}
+        \setbeamercolor*{background canvas}{bg=rbcolor}
+        \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
+
+        \setbeamercolor*{normal text}{fg=hcolor}
+
+        % Title page, you should use this in a frame with the [plain] option.
+        \defbeamertemplate*{title page normal}{fancy theme}[1][]{
+            {\parskip0pt\offinterlineskip%
+            \hbox{\hskip-\Gm@lmargin\hbox{\vbox{%
+            \@tempdima=\textwidth\textwidth=\paperwidth\hsize=\textwidth\def\\{,}\vbox{}\vskip-1.5ex%
+            
+            % Top Logo.
+            \begin{beamercolorbox}[wd=\paperwidth,ht=7ex,leftskip=2ex,dp=0.25\paperheight]{title page header}
+                %\includegraphics[height=4ex]{\ulogoint}
+                \newline \newline
+            \end{beamercolorbox}%
+            
+            %% Top Logo positioned with tikz
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-1.5em,xshift=33.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    \includegraphics[scale=0.23]{\ulogooint}};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[%
+            yshift=-18.5em,xshift=26.5em
+            ] (img) at (current page.north west) [anchor=north west]{%
+                    %\includegraphics[height=\ulogoheightint]{\ulogoint}};
+                    \includegraphics[scale=0.22]{\ulogoint}};
+            \end{tikzpicture}
+            
+            \vbox{}\vskip-\beamer@fancy@lineup%
+            \vbox{}\vskip-\beamer@fancy@linemid%
+            }}%
+            \hskip-\Gm@rmargin%
+            }}\hfil%
+            %
+            
+            % Title.
+            \vskip-8ex
+            %\hskip14ex
+            {\Large
+            {\usebeamerfont{title}\usebeamercolor[highlightcolor]{title}\inserttitle\par}%
+            }
+            %\usebeamerfont{subtitle}\inserttitle\par%
+            \ifx\insertsubtitle\@empty%
+            \else%
+            \vskip10.25ex%
+            {\usebeamerfont{subtitle}\usebeamercolor[hcolor]{subtitle}\insertsubtitle\par}%
+            \fi%  
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.25\beamer@leftmargin%
+            
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[hcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+            \vspace{5ex}%
+            
+            % Authors, institute and date
+            \begin{beamercolorbox}[wd=\textwidth]{author}
+            {%
+                \usebeamerfont{information}%
+                \usebeamerfont{author}\insertauthor \hspace{1ex}
+                % Email is only printed if defined by user with \email{} and there is some content
+            \ifdefined\insertemail{%
+                    \ifx\insertemail\@empty%
+                    \\[1ex]%
+                    \else%
+                    \usebeamerfont{email}\textcolor{lcolor}{\textless \insertemail \textgreater}\\[1ex]%
+                    \fi%}
+            }\else{%
+                \\[1ex]%
+                }%
+                \fi%
+                \usebeamerfont{author}\insertadvisor \\[0.3ex]
+                \usebeamerfont{institute}\insertinstitute \\[3ex]%
+                \usebeamerfont{date}\insertdate%
+            }
+            \end{beamercolorbox}
+
+        }
+        \defbeamertemplate*{title page}{fancy}[1][]
+        {
+            \def\beamer@fancy@truetext{true}%
+            \usebeamertemplate{title page normal}%
+        }
+        % General frame.
+        \defbeamertemplate*{frametitle}{decolines theme}[1][left]
+        {
+            \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+            \@tempdima=\textwidth%
+            \advance\@tempdima by\beamer@leftmargin%
+            \advance\@tempdima by\beamer@rightmargin%
+            \vbox{}\vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[sep=\beamer@leftmargin,#1,wd=\the\@tempdima]{}
+                \usebeamerfont{frametitle}\usebeamercolor[bg]{framesubtitle}%
+                \vbox{}\vskip0ex%
+                \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
+                \strut\insertframetitle\strut\par%
+                {%
+                \ifx\insertframesubtitle\@empty%
+                \else%
+                {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                \fi}%
+                \vskip-1ex%
+                \if@tempswa\else\vskip-\beamer@leftmargin\fi
+            \end{beamercolorbox}%
+            \def\beamer@decolines@truetext{true}%
+            \vskip-.5\beamer@leftmargin%
+            \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
+                \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+            \end{beamercolorbox}%
+        }
+        % Footer.
+        \defbeamertemplate*{footline}{decolines theme}
+        {
+            \hbox{%
+            \begin{beamercolorbox}[wd=0.75\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                \usebeamerfont{title in head/foot}\insertshorttitle{} : \insertauthor{}
+                %\usebeamercolor[bg]{bcolor11}
+            \end{beamercolorbox}%
+
+            \begin{beamercolorbox}[wd=0.15\textwidth,ht=3ex,dp=1.5ex,left,leftskip=3ex]{page footer}%
+                %\usebeamerfont{title in head/foot}\insertauthor{}
+                \centering
+                \vspace*{-0.1cm}
+                \includegraphics[height=3.5ex]{\ulogofint}
+            \end{beamercolorbox}%
+
+            \begin{beamercolorbox}[wd=0.1\textwidth,ht=3ex,dp=1.5ex,right,leftskip=2ex]{page footer}%
+                \centering
+                \usebeamerfont{title in head/foot}%
+                \iftoggle{bbTotalNoSlidesEnabled}{\insertframenumber{} / \inserttotalframenumber}{\insertframenumber{} de \inserttotalframenumber{} }%
+            \end{beamercolorbox}}%
+        }
     \fi%
 \fi%
 
-\setbeamercolor{frametitle}{bg=white,fg=col1}
+%\setbeamercolor{frametitle}{bg=white,fg=col1}
 
 \mode
 <all>
