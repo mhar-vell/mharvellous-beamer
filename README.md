@@ -13,10 +13,10 @@ To clone and run this beamer, follow command line above:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/mhar-vell/beamer-template
+$ git clone https://github.com/mhar-vell/mharvellous-beamer
 
 # Go into the repository
-$ cd beamer-template
+$ cd mharvellous-beamer
 
 # Open on VS Code
 $ code .
