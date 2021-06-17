@@ -1,8 +1,5 @@
 \documentclass[aspectratio=169,xcolor=table]{beamer}
-%\usetheme[style=default]{mhar-vell}
-\usetheme[style=classic]{mhar-vell}
-%\usetheme[style=dark]{mhar-vell}
-\usepackage{mhar-vell}
+\usetheme[style=default]{mhar-vell}
 %\usepackage{helvet}
 %*--------------------------------------------------
 \usepackage{bibunits}  
@@ -81,10 +78,10 @@
 \advisor            {Orientador: Marco A. dos Reis}
 \institute          {Robótica e Sistemas Autônomos, Senai Cimatec}
 \date               {Mês de 202x}
-\ulogo        		{Template/logosenaicimatecnegativo}
-\ulogof             {Template/logosenaicimatec2020}
-\ulogoo        		{Template/rosa-logo}
-\ulistelement    	{Template/bullet-white}
+% \ulogo        		{Template/logosenaicimatecnegativo}
+% \ulogof             {Template/logosenaicimatec2020}
+% \ulogoo        		{Template/rosa-logo}
+% \ulistelement    	{Template/bullet-white}
 
 %*-------------------------------------------------------------------------------
 \graphicspath{{Media/pictures/}}
@@ -98,7 +95,8 @@
     \includemedia[
         %width=1ex,
         %height=1ex,
-        activate=pageopen, 
+        %activate=pageopen, 
+        activate=onclick,
         deactivate=onclick,
         %passcontext,
         transparent,
@@ -110,8 +108,8 @@
                     &Play=2s
                     &repeat=always
                     %&Loop=true
-                }
-                ]
+        }
+    ]
     {}{VPlayer.swf}
 %*----------- start-page--------------------------
     \titlepage
