@@ -1,5 +1,5 @@
 \documentclass[aspectratio=169,xcolor=table]{beamer}
-\usetheme[style=default]{mhar-vell}
+\usetheme[style=classic]{mhar-vell}
 %\usepackage{helvet}
 %*--------------------------------------------------
 \usepackage{bibunits}  
@@ -71,13 +71,13 @@
 %\setbeameroption{show notes on second screen=right}
 \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}
 %*-------------------------------------------------------------------------------
-\title              {Título}
-\subtitle           {Subtítulo}
-\author             {Nome Sobrenome}
-\email              {nome@site.com}
-\advisor            {Orientador: Marco A. dos Reis}
+\title              {Método BiLi}
+\subtitle           {Otimização para revisão bibliográfica}
+\author             {Marco Reis}
+\email              {marcoreis@fieb.org.br}
+\advisor            {Orientador: Roberto L. S. Monteiro}
 \institute          {Robótica e Sistemas Autônomos, Senai Cimatec}
-\date               {Mês de 202x}
+\date               {Outubro de 2021}
 % \ulogo        		{Template/logosenaicimatecnegativo}
 % \ulogof             {Template/logosenaicimatec2020}
 % \ulogoo        		{Template/rosa-logo}
@@ -90,11 +90,11 @@
 %*-------------------------------------------------------------------------------
 \begin{document}
 %*----------- COVER -------------------------------------------------------------
- \begin{frame}[t,plain]
+\begin{frame}[t,plain]
 %*----------- sound--------------------------------
     \includemedia[
-        %width=1ex,
-        %height=1ex,
+        width=1ex,
+        height=1ex,
         %activate=pageopen, 
         activate=onclick,
         deactivate=onclick,
@@ -120,7 +120,7 @@
 %-
 %*----------- SECTIONS ----------------------------------------------------------
 \input{Sections/01-introduction}
-\input{Sections/02-review}
+\input{Sections/02-bibliometria}
 \input{Sections/03-method}
 \input{Sections/04-results}
 \input{Sections/05-references}
