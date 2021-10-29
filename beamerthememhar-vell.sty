@@ -150,7 +150,7 @@
                 \else%
                 {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
                 \fi}%
-                \vskip-1ex%
+                %\vskip-1ex%
                 \if@tempswa\else\vskip-\beamer@leftmargin\fi
             \end{beamercolorbox}%
             \def\beamer@decolines@truetext{true}%
@@ -528,7 +528,7 @@
 \newlength{\beamer@fancy@linebottom}
 \setlength{\beamer@fancy@linebottom}{.01\paperheight}
 \newlength{\headerheight}
-\setlength{\headerheight}{.045\paperheight}
+\setlength{\headerheight}{.04\paperheight}
 % This particular setting is because 1ex pdflatex < 1ex xelatex
 % sets the height of the logo
 \ifpdf
@@ -611,7 +611,7 @@
         \column{.6\textwidth}
             {\parskip0pt\offinterlineskip%
             \hbox{\hskip-\Gm@lmargin\hbox{\vbox{%
-            \vbox{}\vskip-1.15ex%
+            \vbox{}\vskip-1.4ex%
             \begin{beamercolorbox}[wd=\textwidth,ht=\paperheight]{title page header}
             \end{beamercolorbox}%
             \begin{tikzpicture}[remember picture,overlay]
@@ -688,6 +688,7 @@
     \node[minimum size=0pt,inner sep=0pt,#1](#2){#3};%
 }
 %
+%//todo verificar wider
 \newcommand\Wider[2][3em]{%
 \makebox[\linewidth][c]{%
   \begin{minipage}{\dimexpr\textwidth+#1\relax}
