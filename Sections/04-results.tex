@@ -15,7 +15,6 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{A importância atual da robótica}
     \begin{center}
-        % \movie[loop,width=0.6\linewidth,height=0.3375\linewidth,showcontrols=false,autostart]{\includegraphics[width=0.6\textwidth]{Media/gifs/robotdesinfec0.png}}{Media/gifs/robotdesinfec.wmv}
     
         \includemedia[
             width=0.7\linewidth,
@@ -23,29 +22,14 @@
             activate=pageopen,
             passcontext, 
             %transparent,
-            addresource=./Media/gifs/robotdesinfec.wmv,
+            addresource=./Source/gifs/robotdesinfec.wmv,
             flashvars={
-            source=./Media/gifs/robotdesinfec.wmv
+            source=./Source/gifs/robotdesinfec.wmv
             &autoPlay=true
             &autoRewind=true
             &loop=true}
-            ]{\fbox{\includegraphics{Media/gifs/robotdesinfec0.png}}}{VPlayer.swf}
+            ]{\fbox{\includegraphics{Source/gifs/robotdesinfec0.png}}}{VPlayer.swf}
     \end{center}
-%  %\movie[width=8cm,height=4.5cm]{test}{../Movies/Darwin-OP.mp4}
-
-% % \includemedia[
-% %     width=0.4\linewidth,
-% %     totalheight=0.225\linewidth,
-% %     activate=pageopen,
-% %     passcontext,  %show VPlayer's right-click menu
-% %     addresource=../Movies/Darwin-OP.mp4,
-% %     flashvars={
-% %       %important: same path as in `addresource'
-% %       source=../Movies/Darwin-OP.mp4
-% %     }
-% %   ]{\fbox{Click!}}{VPlayer.swf}
-
-%     \pdfpcmovie{\includegraphics[width=\textwidth]{Darwin-OP}}{Darwin-OP.mp4}
 
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -78,7 +62,7 @@
             \begin{tikzpicture}[thick, scale=0.4, every node/.style={scale=0.1}]
                 \node[at=(current page.center)] {
                %\input{./Media/r-graphics/img-marco1.tex}
-                \input{./Media/r-graphics/graficox.tex}
+                \input{./Source/r-graphics/graficox.tex}
                 };
             \end{tikzpicture}
     \end{columns}
@@ -100,7 +84,7 @@
         \centering
         \begin{tikzpicture}[thick, scale=0.35, every node/.style={scale=0.5}]
             \node[at=(current page.center)] {
-            \input{./Media/r-graphics/graficox.tex}
+            \input{./Source/r-graphics/graficox.tex}
             };
         \end{tikzpicture}
     \end{bclogo}
@@ -112,14 +96,14 @@
 \begin{frame}
     \begin{center}
         \vspace*{1.5cm}
-        \textbf{\Huge{\textcolor{red}{MUDANÇA}}}
+        \textbf{\Huge{\textcolor{orange}{MUDANÇA}}}
     \end{center}
     
 %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
  \end{frame}
  %-
- %*----------- SLIDE -------------------------------------------------------------
+%*----------- SLIDE -------------------------------------------------------------
 \begin{frame}
     %\transdissolve[duration=0.5]
     %\hspace*{-1cm}
@@ -138,6 +122,7 @@
         \hfill\hfill
         \column{.05\textwidth} 
         \column{.6\textwidth}
+            \small{\lipsum[2-1]}
             \begin{itemize}
                 \item tópico 1
                 \item tópico 2 
@@ -146,11 +131,44 @@
             \end{itemize}
     \end{columns}
   
-%*----------- notes__
+ %*----------- notes__
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
- \end{frame}
- %-
-  %*----------- SLIDE -------------------------------------------------------------
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}
+    %\transdissolve[duration=0.5]
+    %\hspace*{-1cm}
+    \begin{columns}
+        %\column{.01\textwidth}
+        \hspace*{0.5cm}
+        \column{.6\textwidth}
+            \small{\lipsum[2-1]}
+            \begin{itemize}
+                \item tópico 1
+                \item tópico 2 
+                \item \xout{tópico 3}
+                \item \sout{last tópico}
+            \end{itemize}
+        \column{.05\textwidth} 
+        \column{0.4\textwidth}
+            ~\hfill
+            \vbox{}\vskip-1.4ex%
+            \begin{beamercolorbox}[sep=8em, colsep*=18pt, center, wd=\textwidth, ht=\paperheight]{title page header}%
+                \begin{center}
+                    \textbf{\huge{VISÃO}}\par
+                    \vspace*{0.3cm}
+                    \textbf{\huge{FUTURA}}
+                \end{center}
+            \end{beamercolorbox}%
+        \hfill\hfill
+    \end{columns}
+  
+ %*----------- notes__
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
 \begin{frame}
     %\transdissolve[duration=0.5]
     %\hspace*{-1cm}
@@ -175,7 +193,35 @@
             
     \end{columns}
   
-%*----------- notes
+ %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
- \end{frame}
+\end{frame}
+ %-
+ %*----------- SLIDE -------------------------------------------------------------
+\begin{frame}
+    %\transdissolve[duration=0.5]
+    %\hspace*{-1cm}
+    
+    \begin{columns}
+        %\column{.01\textwidth}
+        \column{.6\textwidth}
+            \begin{center}
+                \includegraphics[width=.5\textwidth]{darwin-op-2}
+            \end{center}
+        \column{.05\textwidth}
+        \column{0.4\textwidth}
+            ~\hfill
+            \vbox{}\vskip-1.4ex%
+            \begin{beamercolorbox}[sep=8em, colsep*=18pt, wd=\textwidth,ht=\paperheight]{title page header}
+                \begin{center}
+                    \textbf{\huge{VISÃO}}\par
+                    \vspace*{0.3cm}
+                    \textbf{\huge{FUTURA}}
+                \end{center}
+            \end{beamercolorbox}%
+    \end{columns}
+  
+ %*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
  %-

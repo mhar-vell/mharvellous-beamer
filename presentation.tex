@@ -1,5 +1,11 @@
 \documentclass[aspectratio=169,xcolor=table]{beamer}
-\usetheme[style=default]{mhar-vell}
+
+%The themes:
+%\usetheme[style=default]{mharvellous}
+%\usetheme[style=classic]{mharvellous}
+%\usetheme[style=dark]{mharvellous}
+\usetheme[style=mdracula]{mharvellous}
+%*--------------------------------------------------
 %\usepackage{helvet}
 %*--------------------------------------------------
 \usepackage{bibunits}  
@@ -15,6 +21,7 @@
 %\usepackage{natbib}
 \usepackage{bibentry}
 %*--------------------------------------------------
+\usepackage{lipsum}
 \usepackage{epigraph}
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -23,7 +30,6 @@
 %\usepackage{multimedia}
 \usepackage{media9}
 %\usepackage{pdfpc-movie}
-\usepackage{tikz}
 \usepackage{circledsteps}
 \usepackage{listings}
 \usepackage[normalem]{ulem}
@@ -51,6 +57,7 @@
 %\usepackage{xcolor}
 \usepackage{tcolorbox}
 \usepackage{xcolor}
+\usepackage[export]{adjustbox}
 %*--------------------------------------------------
 \usepackage{amsmath}
 \usepackage{xfrac}
@@ -84,7 +91,7 @@
 % \ulistelement    	{Template/bullet-white}
 
 %*-------------------------------------------------------------------------------
-\graphicspath{{Media/pictures/}}
+\graphicspath{{Source/pictures/}}
 %*-------------------------------------------------------------------------------
 \totalNoSlidesDisabled % To turn off the total number of slides in the footer. Comment this if you want the total number of slides in the footer
 %*-------------------------------------------------------------------------------
@@ -100,9 +107,9 @@
         deactivate=onclick,
         %passcontext,
         transparent,
-        addresource=./Media/sounds/hip-hop.mp3,
+        addresource=./Source/sounds/hip-hop.mp3,
         flashvars={
-                    source=./Media/sounds/hip-hop.mp3
+                    source=./Source/sounds/hip-hop.mp3
                     %&autoPlay=true
                     &autoRewind=true
                     &Play=2s
@@ -114,7 +121,6 @@
 %*----------- start-page--------------------------
     \titlepage
 %*----------- notes-------------------------------
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
