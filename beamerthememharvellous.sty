@@ -327,29 +327,30 @@
             \newcommand*{\ulistelement}[1]{\def\ulistelementint{#1}}
 
             \ulogo        		{Template/logosenaicimatecnegativo}
-            \ulogof             {Template/logosenaicimatec2020}
+            \ulogof             {Template/logosenaicimatecnegativo}
             \ulogoo        		{Template/rosa-logo}
             \ulistelement    	{Template/bullet-blue}
 
-            \definecolor{shadecolor}{RGB}{47,48,49}
+            \definecolor{shadecolor}{RGB}{136,255,126}
 
-            \setbeamercolor*{palette primary}{fg=mdracula2,bg=mdracula4}
+            \setbeamercolor*{palette primary}{fg=mdracula10,bg=mdracula4}
             \setbeamercolor*{palette highlight}{fg=mdracula3,bg=mdracula2}
             \setbeamercolor*{palette line}{fg=black,bg=hcolor}
             \setbeamercolor*{title page header}{parent=palette highlight}
             \setbeamercolor*{titlelike}{bg=black}
             \setbeamercolor*{title}{bg=rbcolor,fg=black}
-            \setbeamercolor*{frametitle}{bg=hcolor,fg=black}
+            \setbeamercolor*{frametitle}{bg=hcolor,fg=mdracula8}
             %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
             \setbeamercolor*{lineup}{parent=palette line}
             \setbeamercolor*{part title}{bg=bcolor11,fg=black}
-            \setbeamercolor*{item}{fg=c5color}
-            \setbeamercolor*{page footer}{fg=mdracula3,bg=mdracula6}
+            \setbeamercolor*{item}{fg=mdracula10}
+            \setbeamercolor*{page footer}{fg=white,bg=mdracula6}
             \setbeamercolor*{alerted text}{fg=highlightcolor}
             \setbeamercolor*{background canvas}{bg=mdracula1}
             \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
             \setbeamercolor*{normal text}{fg=mdracula4}
+
             % Title page, you should use this in a frame with the [plain] option.
             \defbeamertemplate*{title page normal}{fancy theme}[1][]{
                 {\parskip0pt\offinterlineskip%
@@ -436,20 +437,20 @@
             % General frame.
             \defbeamertemplate*{frametitle}{decolines theme}[1][left]
             {
-                \ifbeamercolorempty[mdracula4]{frametitle}{}{\nointerlineskip}%
+                \ifbeamercolorempty[mdracula8]{frametitle}{}{\nointerlineskip}%
                 \@tempdima=\textwidth%
                 \advance\@tempdima by\beamer@leftmargin%
                 \advance\@tempdima by\beamer@rightmargin%
                 \vbox{}\vskip-.5\beamer@leftmargin%
                 \begin{beamercolorbox}[sep=\beamer@leftmargin,#1,wd=\the\@tempdima]{}
-                    \usebeamerfont{frametitle}\usebeamercolor[mdracula4]{framesubtitle}%
+                    \usebeamerfont{frametitle}\usebeamercolor[mdracula8]{framesubtitle}%
                     \vbox{}\vskip0ex%
                     \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
                     \strut\insertframetitle\strut\par%
                     {%
                     \ifx\insertframesubtitle\@empty%
                     \else%
-                    {\usebeamerfont{framesubtitle}\usebeamercolor[mdracula4]{framesubtitle}\insertframesubtitle\strut\par}%
+                    {\usebeamerfont{framesubtitle}\usebeamercolor[mdracula8]{framesubtitle}\insertframesubtitle\strut\par}%
                     \fi}%
                     \vskip-1ex%
                     \if@tempswa\else\vskip-\beamer@leftmargin\fi
@@ -463,9 +464,12 @@
             % Blocks (box)
                 \setbeamertemplate{blocks}[shadow=true]
                 \setbeamertemplate{theorems}[normal font]
-                \setbeamercolor{block title}{fg=white,bg=shadecolor!100}
-                \setbeamercolor{block body}{fg=gcolor,bg=hcolor!40}
-                \setbeamercolor{block body example}{bg=hcolor!40}
+                \setbeamercolor{block title}{fg=mdracula0, bg=mdracula7!100}
+                \setbeamercolor{block body}{fg=mdracula0, bg=hcolor!40}
+                \setbeamercolor{block title alerted}{fg=mdracula0, bg=mdracula5!100}
+                \setbeamercolor{block body alerted}{fg=mdracula0, bg=hcolor!40}
+                \setbeamercolor{block title example}{fg=mdracula0, bg=mdracula10!100}
+                \setbeamercolor{block body example}{fg=mdracula0, bg=hcolor!40}
 
         \else% 
             %============= default =============
@@ -674,12 +678,17 @@
 
 %% Official color sequence
 %
-\definecolor{mdracula1}{RGB}{42,44,55} %background escuro
+\definecolor{mdracula0}{RGB}{42,44,55} %background escuro
+\definecolor{mdracula1}{RGB}{56,58,89} %background não tão escuro
 \definecolor{mdracula2}{RGB}{34,33,44} %faixa do título -roxo escuro
-\definecolor{mdracula3}{RGB}{255,255,128} %titulo destaque fonte
-\definecolor{mdracula4}{RGB}{254,128,191} %fonte
-\definecolor{mdracula5}{RGB}{254,149,128} %fonte fonte
-\definecolor{mdracula6}{RGB}{69,81,88} %footer background
+\definecolor{mdracula3}{RGB}{255,255,128} %titulo destaque fonte (amarelo)
+\definecolor{mdracula4}{RGB}{254,128,191} %fonte (rosa)
+\definecolor{mdracula5}{RGB}{254,149,128} %fonte fonte (laranjinha)
+\definecolor{mdracula6}{RGB}{69,81,88} %footer background (esverdeado)
+\definecolor{mdracula7}{RGB}{136,255,126} % (verde limão)
+\definecolor{mdracula8}{RGB}{125,255,234} % (azul piscina)
+\definecolor{mdracula9}{RGB}{150,127,255} % (roxo)
+\definecolor{mdracula10}{RGB}{51,181,198} % (azul turqueza)
 
 \definecolor{bcolor1}{RGB}{165,215,210}
 \definecolor{bcolor2}{RGB}{30,165,165}
