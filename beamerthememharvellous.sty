@@ -329,7 +329,7 @@
             \ulogo        		{Template/logosenaicimatecnegativo}
             \ulogof             {Template/logosenaicimatecnegativo}
             \ulogoo        		{Template/rosa-logo}
-            \ulistelement    	{Template/bullet-blue}
+            \ulistelement    	{Template/bullet-orange3}
 
             \definecolor{shadecolor}{RGB}{136,255,126}
 
@@ -343,13 +343,13 @@
             %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
             \setbeamercolor*{lineup}{parent=palette line}
             \setbeamercolor*{part title}{bg=bcolor11,fg=black}
-            \setbeamercolor*{item}{fg=mdracula10}
+            \setbeamercolor*{item}{fg=mdracula5}
             \setbeamercolor*{page footer}{fg=white,bg=mdracula6}
             \setbeamercolor*{alerted text}{fg=highlightcolor}
             \setbeamercolor*{background canvas}{bg=mdracula1}
             \hypersetup{colorlinks=false,linkcolor=highlightcolor,urlcolor=highlightcolor,citecolor=lcolor}
 
-            \setbeamercolor*{normal text}{fg=mdracula4}
+            \setbeamercolor*{normal text}{fg=mdracula9}
 
             % Title page, you should use this in a frame with the [plain] option.
             \defbeamertemplate*{title page normal}{fancy theme}[1][]{
@@ -450,7 +450,7 @@
                     {%
                     \ifx\insertframesubtitle\@empty%
                     \else%
-                    {\usebeamerfont{framesubtitle}\usebeamercolor[mdracula8]{framesubtitle}\insertframesubtitle\strut\par}%
+                    {\usebeamerfont{framesubtitle}\usebeamercolor[mdracula4]{framesubtitle}\insertframesubtitle\strut\par}%
                     \fi}%
                     \vskip-1ex%
                     \if@tempswa\else\vskip-\beamer@leftmargin\fi
@@ -619,7 +619,10 @@
                 \setbeamertemplate{theorems}[normal font]
                 \setbeamercolor{block title}{fg=white,bg=shadecolor!100}
                 \setbeamercolor{block body}{fg=gcolor,bg=hcolor!40}
-                \setbeamercolor{block body example}{bg=hcolor!40}
+                \setbeamercolor{block title alerted}{fg=gcolor,bg=highlightcolor!100}
+                \setbeamercolor{block body alerted}{fg=gcolor,bg=hcolor!40}
+                \setbeamercolor{block title example}{fg=gcolor,bg=c2color!100}
+                \setbeamercolor{block body example}{fg=gcolor,bg=hcolor!40}
 
         \fi%
     \fi%

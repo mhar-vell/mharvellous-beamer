@@ -144,11 +144,21 @@
     \begin{columns}
         %\column{.01\textwidth}
         \column{0.4\textwidth}
-        ~\hfill
-        \begin{beamercolorbox}[sep=8em, colsep*=18pt, center, wd=\textwidth, ht=\paperheight]{title page header}%
-            \includegraphics[trim = 0 0 0 0, clip]{melody-p-wFN9B3s_iik-unsplash.jpg}
-        \end{beamercolorbox}%
-        \hfill\hfill
+       %~\hfill
+        %\begin{beamercolorbox}[sep=8em, colsep*=18pt, center, wd=\textwidth, ht=\paperheight]{title page header}%
+        %\vspace*{-1.5cm}%
+        % \raggedright
+        % \begin{figure}[p]
+        %     \includegraphics[trim = 0 0 0 10, clip, width=1.03\paperwidth, height=1.03\paperheight, keepaspectratio=true]{melody-p-wFN9B3s_iik-unsplash.jpg}
+        % \end{figure}
+
+        \begin{tikzpicture}[remember picture,overlay]
+            \node [xshift=3cm,yshift=-4.1cm] at (current page.north west) {
+                \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{melody-p-wFN9B3s_iik-unsplash.jpg}
+            };
+        \end{tikzpicture}
+        %\end{beamercolorbox}%
+        %\hfill\hfill
         \column{.05\textwidth} 
         \column{.6\textwidth}
             \small{\lipsum[2-1]}
@@ -217,7 +227,11 @@
         \column{.05\textwidth} 
         \column{.6\textwidth}
         \begin{center}
-            \includegraphics[width=.5\textwidth]{darwin-op-2}
+            \begin{figure}
+                \includegraphics[width=.5\textwidth]{darwin-op-2}
+                \caption{Darwim OP \cite{webcite}.}
+            \end{figure}
+            
         \end{center}
             
     \end{columns}
