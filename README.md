@@ -23,7 +23,7 @@ $ code .
 
 ```
 ### The Styles
-The mharvellous beamer offers 4 distinct styles: *default, classic, dark and mdracula*.
+The mharvellous beamer offers 4 distinct styles: *default, classic, dark and mracula*.
 
 To change the style you must change the following line in the main file **presentation.tex**:
 
