@@ -24,7 +24,6 @@ $ code .
 ```
 ### The Styles
 The mharvellous beamer offers 4 distinct styles: *default, classic, dark and mdracula*.
-![default](img/default.png =10x9) | ![classic](img/classic.png =10x9) | ![dark](img/dark.png =10x9) | ![mdracula](img/mdracula.png =10x9)
 
 To change the style you must change the following line in the main file **presentation.tex**:
 
