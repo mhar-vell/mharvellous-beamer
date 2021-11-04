@@ -229,7 +229,7 @@
         \begin{center}
             \begin{figure}
                 \includegraphics[width=.5\textwidth]{darwin-op-2}
-                \caption{Darwim OP \cite{webcite}.}
+                \caption{Darwim OP \cite{webcite}}
             \end{figure}
             
         \end{center}
@@ -240,7 +240,7 @@
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
  %-
- %*----------- SLIDE -------------------------------------------------------------
+%*----------- SLIDE -------------------------------------------------------------
 \begin{frame}
     %\transdissolve[duration=0.5]
     %\hspace*{-1cm}
@@ -249,7 +249,11 @@
         %\column{.01\textwidth}
         \column{.6\textwidth}
             \begin{center}
-                \includegraphics[width=.5\textwidth]{darwin-op-2}
+                \begin{figure}
+                    \includegraphics[width=.5\textwidth]{darwin-op-2}
+                    \caption{Darwim OP \cite{webcite}}
+                \end{figure}
+                
             \end{center}
         \column{.05\textwidth}
         \column{0.4\textwidth}
@@ -267,4 +271,113 @@
  %*----------- notes
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
- %-
+%-
+%*----------- SLIDE -------------------------------------------------------------
+% \begin{frame}
+%     %\transdissolve[duration=0.5]
+%     %\hspace*{-1cm}
+    
+%     \begin{columns}
+%         %\column{.01\textwidth}
+%         \column{.6\textwidth}
+%             \begin{tikzpicture}[node distance=1.cm, every node/.style={fill=white, font=\sffamily}, align=center]
+%             % Specification of nodes (position, etc.)
+%                 \node (start)             [activityStarts]              {Activity starts};
+%                 \node (onCreateBlock)     [process, below of=start]          {onCreate()};
+%                 \node (onStartBlock)      [process, below of=onCreateBlock]   {onStart()};
+%                 \node (onResumeBlock)     [process, below of=onStartBlock]   {onResume()};
+%                 \node (activityRuns)      [activityRuns, below of=onResumeBlock] {Activity is running};
+%                 \node (onPauseBlock)      [process, below of=activityRuns, yshift=-1cm] {onPause()};
+%                 \node (onStopBlock)       [process, below of=onPauseBlock, yshift=-1cm] {onStop()};
+%                 \node (onDestroyBlock)    [process, below of=onStopBlock, yshift=-1cm] {onDestroy()};
+%                 \node (onRestartBlock)    [process, right of=onStartBlock, xshift=4cm] {onRestart()};
+%                 \node (ActivityEnds)      [startstop, left of=activityRuns, xshift=-4cm] {Process is killed};
+%                 \node (ActivityDestroyed) [startstop, below of=onDestroyBlock] {Activity is shut down};     
+%                 % Specification of lines between nodes specified above
+%                 % with aditional nodes for description 
+%                 \draw[->]             (start) -- (onCreateBlock);
+%                 \draw[->]     (onCreateBlock) -- (onStartBlock);
+%                 \draw[->]      (onStartBlock) -- (onResumeBlock);
+%                 \draw[->]      (activityRuns) -- node[text width=4cm] {Another activity comes in front of the activity} (onPauseBlock);
+%                 \draw[->]      (onPauseBlock) -- node {The activity is no longer visible} (onStopBlock);
+%                 \draw[->]       (onStopBlock) -- node {The activity is shut down by user or system} (onDestroyBlock);
+%                 \draw[->]    (onRestartBlock) -- (onStartBlock);
+%                 \draw[->]       (onStopBlock) -| node[yshift=1.25cm, text width=3cm]
+%                                                 {The activity comes to the foreground}
+%                                                 (onRestartBlock);
+%                 \draw[->]    (onDestroyBlock) -- (ActivityDestroyed);
+%                 \draw[->]      (onPauseBlock) -| node(priorityXMemory)
+%                                                 {higher priority $\rightarrow$ more memory}
+%                                                 (ActivityEnds);
+%                 \draw           (onStopBlock) -| (priorityXMemory);
+%                 \draw[->]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
+%                                                     {User navigates back to the activity}
+%                                                     (onCreateBlock);
+%                 \draw[->] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
+%                     node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
+%                     {The activity comes to the foreground}(onResumeBlock.east);
+%             \end{tikzpicture}
+%         \column{.05\textwidth}
+%         \column{0.4\textwidth}
+%             ~\hfill
+%             \vbox{}\vskip-1.4ex%
+%             \begin{beamercolorbox}[sep=8em, colsep*=18pt, wd=\textwidth,ht=\paperheight]{title page header}
+%                 \begin{center}
+%                     \textbf{\huge{VISÃO}}\par
+%                     \vspace*{0.3cm}
+%                     \textbf{\huge{FUTURA}}
+%                 \end{center}
+%             \end{beamercolorbox}%
+%     \end{columns}
+  
+%  %*----------- notes
+%     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+% \end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}{}
+    %\transdissolve[duration=0.5]
+    %\hspace*{-1cm}
+    
+    \begin{columns}
+        %\column{.01\textwidth}
+        \column{.6\textwidth}
+        \begin{tikzpicture}[font=\sffamily, every matrix/.style={ampersand replacement=\&,column sep=1cm,row sep=1cm}, source/.style={draw,thick,rounded corners,fill=yellow!20,inner sep=.3cm},process/.style={draw,thick,circle,fill=blue!20}, sink/.style={source,fill=green!20},datastore/.style={draw,very thick,shape=datastore,inner sep=.3cm}, dots/.style={gray,scale=2}, to/.style={->,>=stealth',shorten >=1pt,semithick,font=\sffamily\footnotesize}, every node/.style={align=center}]
+          
+            % Position the nodes using a matrix layout
+            \matrix{
+              \node[source] (hisparcbox) {electronics};
+                \& \node[process] (daq) {DAQ}; \& \\
+                \& \node[datastore] (buffer) {buffer}; \& \\
+                \node[datastore] (storage) {storage};
+                \& \node[process] (monitor) {monitor};
+                \& \node[sink] (datastore) {datastore}; \\
+            };
+          
+            % Draw the arrows between the nodes and label them.
+            \draw[to] (hisparcbox) -- node[midway,above] {raw events} node[midway,below] {level 0} (daq);
+            \draw[to] (daq) -- node[midway,right] {raw event data\\level 1} (buffer);
+            \draw[to] (buffer) -- node[midway,right] {raw event data\\level 1} (monitor);
+            \draw[to] (monitor) to[bend right=50] node[midway,above] {events} node[midway,below] {level 1} (storage);
+            \draw[to] (storage) to[bend right=50] node[midway,above] {events} node[midway,below] {level 1} (monitor);
+            \draw[to] (monitor) -- node[midway,above] {events} node[midway,below] {level 1} (datastore);
+          \end{tikzpicture}
+                
+        
+        \column{.05\textwidth}
+        \column{0.4\textwidth}
+            ~\hfill
+            \vbox{}\vskip-1.4ex%
+            \begin{beamercolorbox}[sep=8em, colsep*=18pt, wd=\textwidth,ht=\paperheight]{title page header}
+                \begin{center}
+                    \textbf{\huge{VISÃO}}\par
+                    \vspace*{0.3cm}
+                    \textbf{\huge{FUTURA}}
+                \end{center}
+            \end{beamercolorbox}%
+    \end{columns}
+  
+ %*----------- notes
+    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
