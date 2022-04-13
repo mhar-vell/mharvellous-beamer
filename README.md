@@ -1,4 +1,4 @@
-# MHARVELLOUS Beamer
+# MHARVELLOUS Beamer / ROdrigo Bastos
 A simple presentation template.
 
 ## Main Style
