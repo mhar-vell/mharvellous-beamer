@@ -3,7 +3,7 @@ A simple presentation template.
 
 ## Main Style
 <p align="center">
-  <img src="./img/default.png" alt="Size Limit CLI" width="738">
+  <img src="![WhatsApp Image 2022-04-13 at 23 20 44](https://user-images.githubusercontent.com/99812296/163301916-ba7885b1-71d5-4c53-b539-608f0b966ffe.jpeg)" alt="Size Limit CLI" width="738">
 </p>
 
 
