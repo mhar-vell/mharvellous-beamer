@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Remove the PDF files generated
+*eps-converted-to.pdf
