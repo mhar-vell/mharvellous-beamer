@@ -17,6 +17,8 @@
 \def\beamer@mytheme@styledefault{default}%
 \def\beamer@mytheme@styledark{dark}%
 \def\beamer@mytheme@stylemracula{mracula}%
+% =====================================================================================
+% =====================================================================================
 
 \ifx\beamer@mytheme@style\beamer@mytheme@styleclassic%
     %============= classic =============
@@ -47,7 +49,7 @@
         \setbeamercolor*{page footer}{fg=white,bg=rbcolor}
         \setbeamercolor*{alerted text}{fg=highlightcolor}
         \setbeamercolor*{background canvas}{bg=hcolor}
-        \hypersetup{colorlinks=true,linkcolor= mracula5, urlcolor=rbcolor,citecolor=rbcolor}
+        \hypersetup{colorlinks=true,linkcolor= extracolor, urlcolor=rbcolor,citecolor=rbcolor}
 
         \setbeamercolor*{normal text}{fg=gcolor}
         % Title page, you should use this in a frame with the [plain] option.
@@ -171,8 +173,8 @@
             \setbeamercolor{block body example}{fg=gcolor,bg=hcolor!40}
     
 \else% 
-    \ifx\beamer@mytheme@style\beamer@mytheme@styledark%
-        %============= dark =============
+\ifx\beamer@mytheme@style\beamer@mytheme@styledark%
+    %============= dark =============
         % Text to be set for frontpage
         \newcommand*{\ulogo}[1]{\def\ulogoint{#1}}
         \newcommand*{\ulogof}[1]{\def\ulogofint{#1}}
@@ -323,9 +325,9 @@
             \setbeamercolor{block title example}{fg=gcolor,bg=c5color!100}
             \setbeamercolor{block body example}{fg=gcolor,bg=hcolor!40}
 
-    \else% 
-        \ifx\beamer@mytheme@style\beamer@mytheme@stylemracula%
-            %============= mracula =============
+\else% 
+\ifx\beamer@mytheme@style\beamer@mytheme@stylemracula%
+    %============= mracula =============
             % Text to be set for frontpage
             \newcommand*{\ulogo}[1]{\def\ulogoint{#1}}
             \newcommand*{\ulogof}[1]{\def\ulogofint{#1}}
@@ -477,8 +479,8 @@
                 \setbeamercolor{block title example}{fg=mracula0, bg=mracula10!100}
                 \setbeamercolor{block body example}{fg=mracula0, bg=hcolor!40}
 
-        \else% 
-            %============= default =============
+\else% 
+    %============= default =============
             % Text to be set for frontpage
             \newcommand*{\ulogo}[1]{\def\ulogoint{#1}}
             \newcommand*{\ulogof}[1]{\def\ulogofint{#1}}
@@ -630,9 +632,11 @@
                 \setbeamercolor{block title example}{fg=gcolor,bg=c2color!100}
                 \setbeamercolor{block body example}{fg=gcolor,bg=hcolor!40}
 
-        \fi%
-    \fi%
 \fi%
+\fi%
+\fi%
+% ====================================================================================
+
 
 % Package used for dash rule in titles
 \usepackage{dashrule}
@@ -673,7 +677,7 @@
 {\tiny\raise.3ex\hbox{\donotcoloroutermaths$\blacksquare$}}
 \setbeamertemplate{items}[squarealt]
 
-% Colors.
+% senai colors.
 \definecolor{hcolor}{RGB}{200,210,236} % Color 1 - senaicimatec2020 azul-cinza
 \definecolor{c2color}{RGB}{194,232,0} % Color 2 - senaicimatec2020 verde
 \definecolor{lcolor}{RGB}{0,7,46} % Color 3 - senaicimatec2020 azul-negro
@@ -681,17 +685,18 @@
 \definecolor{c5color}{RGB}{0,224,255} % Color 5 - senaicimatec2020 azul-claro
 \definecolor{rbcolor}{RGB}{44,98,181} % Color 6 - Paleta cores Senai Cimatec azul-clássico-senai
 \definecolor{gcolor}{RGB}{47,48,49} % Color 7 - Paleta cores Senai Cimatec cinza@letra
+\definecolor{extracolor}{RGB}{255,73,73} % Color e - 
 %\setbeamercolor{background canvas}{bg=lcolor}
 %\setbeamercolor{background canvas}{bg=blue}
 %j predefined colors: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
 
 %% Official color sequence
-%
+% mracula colors
 \definecolor{mracula0}{RGB}{42,44,55} %background escuro
-\definecolor{mracula1}{RGB}{56,58,89} %background não tão escuro
+\definecolor{mracula1}{RGB}{84,67,110} %background não tão escuro
 \definecolor{mracula2}{RGB}{34,33,44} %faixa do título -roxo escuro
 \definecolor{mracula3}{RGB}{255,255,128} %titulo destaque fonte (amarelo)
-\definecolor{mracula4}{RGB}{254,170,191} %fonte (rosa)
+\definecolor{mracula4}{RGB}{255,128,191} %fonte (rosa)
 \definecolor{mracula5}{RGB}{254,149,128} %fonte fonte (laranjinha)
 \definecolor{mracula6}{RGB}{69,81,88} %footer background (esverdeado)
 \definecolor{mracula7}{RGB}{136,255,126} % (verde limão)

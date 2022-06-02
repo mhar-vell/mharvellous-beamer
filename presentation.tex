@@ -1,10 +1,10 @@
 \documentclass[aspectratio=169,xcolor=table]{beamer}
 %aspcetratio >> 1610 169 149 54 43 32
 %The themes:
-%\usetheme[style=classic]{mharvellous}
+\usetheme[style=classic]{mharvellous}
 %\usetheme[style=dark]{mharvellous}
 %\usetheme[style=mracula]{mharvellous}
-\usetheme[style=default]{mharvellous}
+%\usetheme[style=default]{mharvellous}
 %*--------------------------------------------------
 %\usepackage{helvet}
 %*--------------------------------------------------
@@ -104,8 +104,8 @@
 %*-------------------------------------------------------------------------------
 \begin{document}
 %*----------- COVER -------------------------------------------------------------
- \begin{frame}[t,plain]
-%*----------- sound--------------------------------
+\begin{frame}[t,plain]
+    %*----------- sound--------------------------------
     \includemedia[
         %width=1ex,
         %height=1ex,
@@ -116,16 +116,16 @@
         transparent,
         addresource=./Source/sounds/hip-hop.mp3,
         flashvars={
-                    source=./Source/sounds/hip-hop.mp3
-                    %&autoPlay=true
-                    &autoRewind=true
-                    &Play=2s
-                    &repeat=always
-                    %&Loop=true
-        }
+                source=./Source/sounds/hip-hop.mp3
+                %&autoPlay=true
+                &autoRewind=true
+                &Play=2s
+                &repeat=always
+                %&Loop=true
+            }
     ]
     {}{VPlayer.swf}
-%*----------- start-page--------------------------
+    %*----------- start-page--------------------------
     \titlepage
     %*----------- notes-------------------------------
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -152,13 +152,13 @@
 %*----------- QUESTIONS ---------------------------------------------------------
 \begin{frame}[c,plain]
     \lastpage{
-        \begin{center}   
-            {\usebeamerfont{title} Questions?}\\[3ex] 
+        \begin{center}
+            {\usebeamerfont{title} Questions?}\\[3ex]
             %\hspace{1.5cm} 
             marco.a.reis@google.com
         \end{center}
     }
-    
+
     %*----------- notes---------------------------------
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
