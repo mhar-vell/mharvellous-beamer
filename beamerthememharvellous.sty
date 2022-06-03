@@ -151,7 +151,7 @@
                 {%
                 \ifx\insertframesubtitle\@empty%
                 \else%
-                {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                {\usebeamerfont{framesubtitle}\usebeamercolor[lcolor]{framesubtitle}\insertframesubtitle\strut\par}%
                 \fi}%
                 \vskip-1ex%
                 \if@tempswa\else\vskip-\beamer@leftmargin\fi
@@ -194,7 +194,7 @@
         \setbeamercolor*{title page header}{parent=palette highlight}
         \setbeamercolor*{titlelike}{bg=black}
         \setbeamercolor*{title}{bg=rbcolor,fg=black}
-        \setbeamercolor*{frametitle}{bg=hcolor,fg=black}
+        \setbeamercolor*{frametitle}{bg=highlightcolor,fg=black}
         %\setbeamercolor*{framesubtitle}{bg=bcolor10,fg=black}
         \setbeamercolor*{lineup}{parent=palette line}
         \setbeamercolor*{part title}{bg=bcolor11,fg=black}
@@ -304,7 +304,7 @@
                 {%
                 \ifx\insertframesubtitle\@empty%
                 \else%
-                {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                {\usebeamerfont{framesubtitle}\usebeamercolor[hcolor]{framesubtitle}\insertframesubtitle\strut\par}%
                 \fi}%
                 \vskip-1ex%
                 \if@tempswa\else\vskip-\beamer@leftmargin\fi
@@ -424,7 +424,7 @@
                         \ifx\insertemail\@empty%
                         \\[1ex]%
                         \else%
-                        \usebeamerfont{email}\textcolor{mracula5}{\textless \insertemail \textgreater}\\[1ex]%
+                        \usebeamerfont{email}\textcolor{mracula10}{\textless \insertemail \textgreater}\\[1ex]%
                         \fi%}
                 }\else{%
                     \\[1ex]%
@@ -611,7 +611,7 @@
                     {%
                     \ifx\insertframesubtitle\@empty%
                     \else%
-                    {\usebeamerfont{framesubtitle}\usebeamercolor[bg]{framesubtitle}\insertframesubtitle\strut\par}%
+                    {\usebeamerfont{framesubtitle}\usebeamercolor[bcolor10]{framesubtitle}\insertframesubtitle\strut\par}%
                     \fi}%
                     \vskip-1ex%
                     \if@tempswa\else\vskip-\beamer@leftmargin\fi
@@ -619,7 +619,7 @@
                 \def\beamer@decolines@truetext{true}%
                 \vskip-.5\beamer@leftmargin%
                 \begin{beamercolorbox}[wd=\textwidth,ht=.1ex,dp=0ex]{}%
-                    \usebeamercolor[lcolor]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
+                    \usebeamercolor[bcolor10]{lineup}\hdashrule{\textwidth}{0.5pt}{1pt 1pt} 
                 \end{beamercolorbox}%
             }
             % Blocks (box)
@@ -696,7 +696,7 @@
 \definecolor{mracula1}{RGB}{84,67,110} %background não tão escuro
 \definecolor{mracula2}{RGB}{34,33,44} %faixa do título -roxo escuro
 \definecolor{mracula3}{RGB}{255,255,128} %titulo destaque fonte (amarelo)
-\definecolor{mracula4}{RGB}{255,128,191} %fonte (rosa)
+\definecolor{mracula4}{RGB}{248,164,191} %fonte (rosa)
 \definecolor{mracula5}{RGB}{254,149,128} %fonte fonte (laranjinha)
 \definecolor{mracula6}{RGB}{69,81,88} %footer background (esverdeado)
 \definecolor{mracula7}{RGB}{136,255,126} % (verde limão)
@@ -730,6 +730,7 @@
 \setlength{\beamer@fancy@linebottom}{.01\paperheight}
 \newlength{\headerheight}
 \setlength{\headerheight}{.04\paperheight}
+
 % This particular setting is because 1ex pdflatex < 1ex xelatex
 % sets the height of the logo
 \ifpdf
@@ -911,6 +912,7 @@
     activityRuns/.style = {base, fill=green!30},
          process/.style = {base, minimum width=2.5cm, fill=orange!15,
                            font=\ttfamily},
+            mycirc/.pic = {\foreach \w in {0,0.5} {\draw (\w,0) circle (0.5cm)}},
 }
 
 % % Bibliography
