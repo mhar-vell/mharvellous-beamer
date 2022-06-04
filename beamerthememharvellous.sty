@@ -4,6 +4,7 @@
 % June 2020
 %
 \usepackage[utf8]{inputenc}
+% \usepackage{tikz}
 
 \graphicspath{{Source/pictures/}}
 
@@ -19,6 +20,8 @@
 \def\beamer@mytheme@stylemracula{mracula}%
 % =====================================================================================
 % =====================================================================================
+
+% \setbeamertemplate{background}{\tikz[overlay,remember picture]\node[opacity=1]at (current page.center){\includegraphics[width = \the\paperwidth, height = \the\paperheight]{./Template/constellation.png}};}
 
 \ifx\beamer@mytheme@style\beamer@mytheme@styleclassic%
     %============= classic =============
